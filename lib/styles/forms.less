@@ -1,0 +1,146 @@
+//squarespace form widget styles
+.form-wrapper .field-list .title {
+  .dolceVita;
+  font-size: 1.8rem;
+}
+
+
+
+
+.product-variants,
+.product-quantity-input {
+  text-align: left;
+
+  @media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+    text-align: right;
+  }
+}
+
+
+
+
+input,
+textarea,
+select,
+.form-wrapper .field-list .field .field-element {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1.6rem;
+  padding: 0.7rem 1rem;
+  color: #666;
+  border: 1px solid @border-color;
+  background-color: #fff;
+  vertical-align: middle;
+  border-radius: 4px;
+  height: 3.4rem;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+textarea,
+.form-wrapper .field-list textarea {
+  min-height: 12rem;
+}
+
+
+
+
+// style all buttons the same and override squarespace stylings
+.button,
+.sqs-editable-button,
+.sqs-add-to-cart-button-wrapper .sqs-add-to-cart-button,
+.form-wrapper input[type=submit],
+.sqs-fullpage-shopping-cart-content .checkout-button,
+input[type=submit],
+button {
+  border-radius: 0;
+  font-size: 1.4rem !important;
+  display: inline-block;
+  margin: 0;
+  padding: 1rem 3rem !important;
+  line-height: 22px !important; //to match height of add to cart spinner
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold !important;
+  color: #fff;
+  background: #000 url(../assets/images/marker_bg2.jpg) bottom center;
+  border: 1px solid #000;
+  cursor: pointer;
+
+  .dolceVita;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+
+.form-submission-text {
+  margin-top: 0;
+
+  p {
+    text-align: center;
+    font-size: 2rem;
+    .dolceVita;
+  }
+}
+
+
+.cn-btn_fwdArrow {
+  border: none;
+
+  &:after {
+    content: '';
+    width: 18%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: -18%;
+
+    background-image: url(../assets/images/btnFwd.png);
+    background-size: 100% 100%;
+  }
+}
+
+
+.cn-btn_backArrow {
+  border: none;
+
+  &:after {
+    content: '';
+    width: 18%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: -18%;
+
+    background-image: url(../assets/images/btnBack.png);
+    background-size: 100% 100%;
+  }
+}
+
+
+
+.cn-emailForm {
+  margin-top: 2rem;
+}
+.cn-emailForm input {
+  width: 66%;
+  margin-bottom: 0;
+}
+.cn-emailForm input label {
+  opacity: 0.5;
+}
+.cn-emailForm input[type=submit] {
+  border-color: #444;
+  margin-left: 2%;
+  width: 32%;
+  padding: 0.7rem 1rem !important;
+}
+
+@media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+  .cn-emailForm {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 2%;
+  }
+}

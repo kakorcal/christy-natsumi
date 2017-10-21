@@ -1,0 +1,366 @@
+.cn-product {
+  text-align: center;
+}
+
+
+.cn-product__title--mobile {
+  font-size: 2.8rem;
+  font-weight: lighter;
+
+  @media screen and (min-width: @screen-tablet) {
+    font-size: 3.5rem;
+  }
+  @media screen and (min-width: @screen-desktop) {
+    display: none;
+  }
+}
+
+
+.cn-product__title--web {
+  display: none;
+
+  @media screen and (min-width: @screen-desktop) {
+    display: block;
+    font-size: 4rem;
+    line-height: 4rem;
+    font-weight: lighter;
+    margin-bottom: 1.5rem;
+  }
+}
+
+
+
+//LEFT COLUMN PARENT
+.cn-product__mask {
+  width: 100%;
+  padding-bottom: 80%;
+  position: relative;
+  margin: 1.8rem 0 2.8rem 0;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 620px;
+
+  @media (min-width: @screen-desktop) {
+    margin-top: 0;
+    float: left;
+    width: 54%;
+    padding-bottom: 60%; //shorter portrait images for desktop
+  }
+}
+
+
+
+.cn-product__mask__slide {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  opacity: 0;
+  backface-visibility: hidden;
+  left: 0;
+
+  transform: translate3d(-50%,-5%,0) rotate3d(0,0,1,-10deg);
+  -moz-transform: translate3d(-50%,-5%,0) rotate3d(0,0,1,-10deg);
+  -webkit-transform: translate3d(-50%,-5%,0) rotate3d(0,0,1,-10deg);
+
+  -webkit-transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  -moz-transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+  transition: all 500ms cubic-bezier(0.770, 0.000, 0.175, 1.000); /* easeInOutQuart */
+
+  @media (min-width: @screen-desktop) {
+    top: 0 !important; //all product images align top on desktop, align center on tablet/mobile
+  }
+}
+
+.cn-product__mask__slide.active {
+  z-index: 100;
+  opacity: 1;
+
+  transform: translate3d(0,0,0) rotate3d(0,0,1,0);
+  -moz-transform: translate3d(0,0,0) rotate3d(0,0,1,0);
+  -webkit-transform: translate3d(0,0,0) rotate3d(0,0,1,0);
+}
+
+
+
+
+//RIGHT COLUMN PARENT
+.cn-product__details {
+  color: #666;
+
+  @media (min-width: @screen-desktop) {
+    text-align: left;
+    float: right;
+
+    width: 42%;
+    max-width: 400px;
+  }
+}
+
+
+
+
+.variant-option-title,
+.quantity-label {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  vertical-align: top;
+  width: 32%;
+  margin-right: 2%;
+  text-align: left;
+  line-height: 3.4rem;
+  font-size: 1.4rem;
+
+  .dolceVita; //mixin
+
+  @media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+    display: block;
+    width: 100%;
+    line-height: 2rem;
+    margin-top: 1rem;
+    text-align: right;
+  }
+}
+
+
+
+
+.variant-select-wrapper {
+  display: inline-block;
+  width: 66%;
+
+  @media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+    width: 100%;
+  }
+}
+
+.product-quantity-input input {
+  display: inline-block;
+}
+
+
+
+
+.cn-product__tnContainer {
+  font-size: 0;
+  width: 100%;
+  max-width: 620px;
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 3rem;
+
+  @media (min-width: @screen-tablet) {
+    margin-bottom: 6rem;
+  }
+}
+
+.cn-product__tnContainer__tn {
+  position: relative;
+  overflow: hidden;
+
+  width: 32%;
+  padding-bottom: 32%;
+  margin-right: 2%;
+  margin-bottom: 2%;
+
+  display: inline-block;
+  cursor: pointer;
+  border: 1px solid @border-color;
+
+  &:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+
+
+
+.cn-product__status {
+  font-size: 0;
+
+  @media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+    text-align: right;
+  }
+
+  //squarespace-generated element
+  .product-mark {
+    width: 20%;
+    padding-bottom: 17%;
+    margin-top: -10%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    &.sold-out {
+      background-image: url("../assets/images/status_soldout_sm.png");
+    }
+    &.sale {
+      background-image: url("../assets/images/status_sale_sm.png");
+    }
+
+    @media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+      margin-top: 10%;
+      width: 30%;
+      padding-bottom: 25%;
+      display: inline-block;
+    }
+  }
+}
+
+
+
+
+.cn-product__options-wrapper {
+  font-size: 0;
+  position: relative;
+  padding-bottom: 6rem;
+  text-align: left;
+
+  p {
+    word-break: break-all;
+  }
+
+  @media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+    width: 34%;
+    margin-right: 4%;
+    border-right: 1px solid #999;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 1.5rem;
+    padding-right: 2%;
+    padding-bottom: 3rem;
+
+    p {
+      text-align: right;
+    }
+  }
+}
+
+
+
+
+.cn-product__price {
+  font-size: 0; //hide the 'from' text
+  margin-left: 33%;
+
+  @media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+    margin-left: -0.75rem;
+    text-align: right;
+  }
+
+  //override squarespace-generated element styles
+  .sqs-money-native {
+    font-size: 3rem;
+    //display: table;
+    padding-left: 1.3rem; //for $ symbol
+    position: relative;
+    margin-bottom: 1.5rem;
+    margin-left: -0.75rem;
+
+    &:before {
+      position: absolute;
+      top: 0.3rem;
+      left: 0;
+      content: '$';
+      font-size: 2rem;
+    }
+  }
+
+  .original-price .sqs-money-native {
+    display: inline-block;
+    position: relative;
+    margin-left: 1.5rem;
+
+    &:after {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: '';
+      background-image: url("../assets/images/strikeout.png");
+      background-size: 100% 100%;
+      position: absolute;
+    }
+  }
+
+}
+
+
+
+
+.variant-option-title:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 1.5rem;
+  z-index: 1;
+
+  background: -moz-linear-gradient(left,  rgba(238,238,238,0) 0%, rgba(238,238,238,1) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(left,  rgba(238,238,238,0) 0%,rgba(238,238,238,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right,  rgba(238,238,238,0) 0%,rgba(238,238,238,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00eeeeee', endColorstr='#eeeeee',GradientType=1 ); /* IE6-9 */
+
+  @media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+    background: none;
+  }
+}
+
+
+//add to cart button styles
+.sqs-add-to-cart-button-wrapper {
+  margin-left: 34%;
+  margin-top: 1.5rem;
+
+  @media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+    margin-left: 0;
+    text-align: right;
+  }
+}
+.sqs-add-to-cart-button {
+  margin-left: 1px !important;
+  color: @color-highlight !important;
+  min-width: 124px;
+  text-align: center;
+
+  // styles applied while item is being added to cart
+  &.cart-adding {
+    pointer-events: none;
+    opacity: 0.8;
+  }
+
+  .sqs-spin {
+    margin-right: 0.75rem;
+  }
+
+  .status-text {
+    display: inline-block;
+  }
+}
+
+
+
+
+.cn-product__excerpt {
+  margin-bottom: 1.5rem;
+
+  //need to override squarespace {excerpt} macro inline styling
+  span {
+    font-size: 1.4rem !important;
+
+    @media (min-width: @screen-tablet) {
+
+    }
+    @media (min-width: @screen-desktop) {
+      font-size: 1.6rem !important;
+    }
+  }
+
+  @media (min-width: @screen-tablet) and (max-width: @screen-desktop-1) {
+    width: 62%;
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 1.5rem;
+  }
+}

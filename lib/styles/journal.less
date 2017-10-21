@@ -1,0 +1,145 @@
+.cn-journal {
+
+  article {
+    margin-bottom: 12rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #000;
+
+    font-size: 1.4rem;
+  }
+
+  h1 {
+    margin-bottom: 3rem;
+    margin-top: 0;
+  }
+
+  .sqs-block-html .sqs-block-content>*:last-child { //squarespace override
+    margin-bottom: 3rem;
+  }
+
+  .title a {
+    font-size: 6rem;
+    text-decoration: none;
+    color: #444;
+    border-bottom: 1px solid transparent;
+
+    &:hover {
+      color: #000;
+      border-bottom-color: #000;
+    }
+  }
+
+
+  nav {
+    text-align: center;
+
+    a {
+      .button;
+      position: relative;
+
+      &:first-child {
+        .cn-btn_backArrow;
+        margin-right: 6rem;
+      }
+      &:last-child {
+        .cn-btn_fwdArrow;
+      }
+    }
+
+    a.disabled {
+      opacity: 0.5;
+      pointer-events: none;
+    }
+  }
+
+
+  //SIDEBAR
+  .cn-sidebar {
+    display: none;
+
+    @media (min-width: @screen-desktop) {
+      display: inline-block;
+    }
+  }
+
+  .cn-sidebar__bio {
+    text-align: center;
+  }
+
+  .cn-sidebar__bio__bioPic {
+    display: inline-block;
+    width: 100%;
+    max-width: 210px;
+  }
+
+  .cn-sidebar__bio__fromsf {
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .cn-sidebar__bio__social {
+    margin: 3rem 0;
+
+    a {
+      border-radius: 50%;
+      background-color: #aaa;
+      display: inline-block;
+      font-size: 0;
+      text-align: center;
+      margin-right: 0.5rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    img {
+      width: 4.4rem;
+      height: 4.4rem;
+    }
+  }
+
+
+  .image-block-outer-wrapper {
+    margin-bottom: 1rem;
+  }
+
+
+
+
+  .meta { //publish date and author (we dont need to show)
+    display: none !important;
+  }
+
+  .sqs-simple-like,
+  .squarespace-social-buttons,
+  .sqs-comment-link {
+    margin: 6rem 1rem 0 0;
+    color: #000 !important;
+    text-decoration: underline !important;
+  }
+
+  .squarespace-social-buttons {
+    display: inline-block;
+  }
+
+  .ss-social-button-wrapper {
+    width: auto !important;
+    padding: 0 !important;
+    background-image: none !important;
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+
+  .ss-social-button {
+    font-weight: normal !important;
+    font-size: 1.4rem !important;
+    color: #000 !important;
+    text-decoration: underline !important;
+
+    background: 2px 2px no-repeat url(../assets/images/journal/icon-share.png) !important;
+    background-size: 16px !important;
+    background-position: 0% 40% !important;
+  }
+}
