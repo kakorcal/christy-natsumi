@@ -35,5 +35,5 @@ gulp.task('scss', ['scss-clean', 'scss-bundle']);
 
 gulp.task('shopify', function() {
   return watch('./+(assets|layout|config|snippets|templates|locales)/**')
-    .pipe(gulpShopify(process.env.API_KEY, process.env.PASSWORD, process.env.STORE, null));
+    .pipe(gulpShopify(process.env.API_KEY, process.env.PASSWORD, process.env.STORE, process.env.DEV_ID));
 });
