@@ -113,7 +113,7 @@
   line-height: 3.4rem;
   font-size: 1.4rem;
 
-  .dolceVita; //mixin
+  @include dolceVita;
 
   @media (min-width: $screen-tablet) and (max-width: $screen-desktop-1) {
     display: block;
@@ -319,7 +319,7 @@
   }
 }
 
-@mixin sqs-add-to-cart-button {
+.sqs-add-to-cart-button {
   margin-left: 1px !important;
   color: $color-highlight !important;
   min-width: 124px;

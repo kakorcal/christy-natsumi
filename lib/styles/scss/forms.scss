@@ -67,6 +67,10 @@ textarea,
   }
 }
 
+@mixin sqs-add-to-cart-button {
+  @include button;
+}
+
 .sqs-editable-button,
 .sqs-add-to-cart-button-wrapper .sqs-add-to-cart-button,
 .form-wrapper input[type=submit],

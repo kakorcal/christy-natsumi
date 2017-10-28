@@ -69,7 +69,7 @@
 
   .summary-title {
     margin: 4% 0 0 0 !important;
-    .dolceVita; //mixin
+    @include dolceVita;
 
     font-size: 1.4rem !important;
     line-height: 1.8rem !important;
