@@ -1,10 +1,13 @@
+require('dotenv').load();
 var gulp = require('gulp');
 var gss = require('gulp-shopify-sass');
 var clean = require('gulp-clean');
 var rename = require('gulp-rename');
+var watch = require('gulp-watch');
+var gulpShopify = require('gulp-shopify-upload');
+
 // var sass = require('gulp-sass');
 // var sassGlob = require('gulp-sass-glob');
-// var watch = require('gulp-watch');
 
 // bundle scss and js files into one file and move to assets folder
 
@@ -29,3 +32,8 @@ gulp.task('scss-clean', function() {
 });
 
 gulp.task('scss', ['scss-clean', 'scss-bundle']);
+
+gulp.task('shopify', function() {
+  return watch('./+(assets|layout|config|snippets|templates|locales)/**')
+    .pipe(gulpShopify(process.env.API_KEY, process.env.PASSWORD, process.env.STORE, null));
+});
