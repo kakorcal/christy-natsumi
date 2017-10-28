@@ -32,13 +32,17 @@ a.instagram:hover { background-color: #b4398a !important; }
 a.facebook:hover  { background-color: #43609c !important; }
 a.rss:hover       { background-color: #ff9900 !important; }
 
-p, ul, ol, .defaultText {
+@mixin defaultText {
   font-size: 1.6rem;
   line-height: 3rem;
   margin: 0 0 3rem 0;
   text-align: left;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+p, ul, ol {
+  @include defaultText;
 }
 
 h1, h2, h3, h4 {
@@ -115,7 +119,7 @@ h4 {
   font-style: normal;
 }
 
-.dolceVita { //should only be applied to element that needs the font, otherwise children will inherit letter-spacing
+@mixin dolceVita { //should only be applied to element that needs the font, otherwise children will inherit letter-spacing
   font-family: 'dolce vita', 'Helvetica Neue', Helvetica, Arial, sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -180,7 +184,7 @@ img.full {
 }
 
 
-.fx-allFast {
+@mixin fx-allFast {
   -webkit-transition: all 200ms ease;
   -moz-transition: all 200ms ease;
   -ms-transition: all 200ms ease;
@@ -203,7 +207,7 @@ img.full {
 }
 
 
-.cn-vignette {
+@mixin cn-vignette {
   content: '';
   position: absolute;
   top: 0;
