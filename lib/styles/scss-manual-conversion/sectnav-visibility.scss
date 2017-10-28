@@ -1,0 +1,11 @@
+//unfortunately because we cannot assign a template to the cart page,
+//we need to include the shop section nav in the default header, hide it for default pages,
+//and show it only for the cart page. other shop pages use header-shop.region
+
+//.cn-header--hideSectNav .cn-header__sectnav {
+//  display: none;
+//}
+//
+//#show-cart .cn-header--hideSectNav .cn-header__sectnav {
+//  display: block;
+//}

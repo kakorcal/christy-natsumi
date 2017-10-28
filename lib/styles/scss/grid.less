@@ -1,0 +1,99 @@
+.row {
+  width: 100%;
+  font-size: 0;
+
+  @media (max-width: @screen-tablet) { //mobile
+    .half,
+    .third,
+    .oneThird,
+    .twoThird {
+      width: 100%;
+      margin-right: 0;
+    }
+    .fourth { width: 48%; }
+    .fourth:nth-child(even) { margin-right: 0; }
+  }
+
+  @media (min-width: @screen-tablet) {
+    .half   { width: 48%; }
+    .third  { width: 30.66%; }
+    .fourth { width: 22%; }
+    .half:nth-child(even) { margin-right: 0; }
+    .third:nth-child(3n)  { margin-right: 0; }
+    .fourth:nth-child(4n) { margin-right: 0; }
+
+    .oneThird,
+    .twoThird {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+
+  @media (min-width: @screen-desktop-1) {
+    .oneThird {
+      width: 32%;
+      margin-right: 4%;
+    }
+    .twoThird {
+      width: 64%;
+    }
+
+    .oneThird.longFirst {
+      margin-right: 0;
+    }
+    .twoThird.longFirst {
+      margin-right: 4%;
+    }
+  }
+}
+
+.row > div {
+  margin-right: 4%;
+  display: inline-block;
+  vertical-align: top;
+}
+
+
+
+.row--btnRow {
+  margin-bottom: 9rem;
+
+  span {
+    .dolceVita;
+    font-size: 1.4rem;
+    font-weight: bold;
+    display: block;
+    margin-top: 3rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .button {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+
+.row--imgRow {
+  margin: 6rem 0;
+
+  .fourth {
+    width: 49.5%;
+    margin: 1% 1% 0 0;
+
+    &:nth-child(even) { margin-right: 0; }
+
+    @media (min-width: @screen-tablet) {
+      width: 24.85%;
+      margin: 0.2% 0.2% 0 0;
+
+      &:nth-child(even) { margin-right: 0.2%; }
+      &:nth-child(4n) { margin-right: 0; }
+    }
+  }
+}
+
+.row--imgRow--noBottom {
+  margin-bottom: 0;
+}
