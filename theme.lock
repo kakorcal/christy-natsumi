@@ -363,8 +363,6 @@ assets/strikeout.png:
   production: 2017-10-29T06:03:16-04:00   5a55c95127359b884dd7fb512c063d41
 assets/timber.js.liquid:
   production: 2017-08-13T17:39:48-04:00   8663e17d15e94386b5d6fb7c3e44b0bf
-assets/timber.scss.liquid:
-  production: 2017-08-13T17:39:48-04:00   ba59f53b6ce2656fb2abd9eedb901fe2
 config/settings_data.json:
   production: 2017-08-13T18:38:00-04:00   fe75d34743f726c8bb511205c7273fc5
 config/settings_schema.json:
@@ -383,6 +381,8 @@ locales/pt-BR.json:
   production: 2017-08-13T18:37:41-04:00   3bc832b43077ef1681f2fe4be3eda8c9
 locales/pt-PT.json:
   production: 2017-08-13T18:37:38-04:00   6ddf443592f389ff55aa739569736f47
+sections/header-home.liquid:
+  development: 2017-10-29T17:40:34-04:00   0d61227290714b9734a829bf00fbea8a
 snippets/ajax-cart-template.liquid:
   production: 2017-08-13T17:39:48-04:00   e6fa15367ab47a164d9dc8e47353c684
 snippets/blog-sidebar.liquid:

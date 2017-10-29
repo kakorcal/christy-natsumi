@@ -1,0 +1,22 @@
+{% for link in linklists.main-menu.links %}
+  <li class="{% if link.active %}active{% endif %}">
+    <a href="{{ link.url }}">{{ link.title }}</a>
+  </li>
+{% endfor %}
+
+{% comment %}
+  <li class="cn-header__nav__shop"><a href="/shop">Shop</a></li>
+{.repeated section items}
+  <li{.section active} class="active"{.end}>
+    {.section collection}
+      <a href="{fullUrl}">{navigationTitle}</a>
+    {.end}
+
+    {.section externalLink}
+      <a href="{url}"{.section newWindow} target="_blank"{.end}>
+        {title}
+      </a>
+    {.end}
+  </li>
+{.end}
+{% endcomment %}
