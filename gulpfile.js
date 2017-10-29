@@ -6,19 +6,6 @@ var rename = require('gulp-rename');
 var watch = require('gulp-watch');
 var gulpShopify = require('gulp-shopify-upload');
 
-// var sass = require('gulp-sass');
-// var sassGlob = require('gulp-sass-glob');
-
-// bundle scss and js files into one file and move to assets folder
-
-// gulp.task('scss-bundle', function() {
-//   return gulp.src('lib/styles/scss/main.scss')
-//     .pipe(sassGlob())
-//     .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-//     .pipe(rename('main.scss.liquid'))
-//     .pipe(gulp.dest('assets'));
-// });
-
 gulp.task('scss-bundle', function() {
   return gulp.src('lib/styles/scss/main.scss')
     .pipe(gss())
@@ -31,6 +18,7 @@ gulp.task('scss-clean', function() {
     .pipe(clean());
 });
 
+// bundle scss move to assets folder
 gulp.task('scss', ['scss-clean', 'scss-bundle']);
 
 gulp.task('shopify', function() {
