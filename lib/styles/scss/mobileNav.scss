@@ -63,11 +63,11 @@
     transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
   }
   &:after {
-    background-image: url("../assets/images/drawerClosed.png");
+    background-image: url({{ 'drawerClosed.png' | asset_url }});
     transform: scale3d(1,1,1);
   }
   &:before {
-    background-image: url("../assets/images/drawerOpen.png");
+    background-image: url({{ 'drawerOpen.png' | asset_url }});
     opacity: 0;
     transform: scale3d(0.5,0.5,1);
   }

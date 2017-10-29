@@ -138,7 +138,7 @@
     color: #000 !important;
     text-decoration: underline !important;
 
-    background: 2px 2px no-repeat url(../assets/images/journal/icon-share.png) !important;
+    background: 2px 2px no-repeat url({{ 'icon-share.png' | asset_url }}) !important;
     background-size: 16px !important;
     background-position: 0% 40% !important;
   }

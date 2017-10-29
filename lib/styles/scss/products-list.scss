@@ -60,10 +60,10 @@
       background-position: 1vw 1vw;
     }
     &.sold-out {
-      background-image: url("../assets/images/status_soldout.png");
+      background-image: url({{ 'status_soldout.png' | asset_url }});
     }
     &.sale {
-      background-image: url("../assets/images/status_sale.png");
+      background-image: url({{ 'status_sale.png' | asset_url }});
     }
   }
 }

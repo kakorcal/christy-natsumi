@@ -80,13 +80,13 @@
 
 
 .lookbook--glint__header {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-1-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-1-m.jpg' | asset_url }});
   padding-bottom: 100%;
 
 
   @media (min-width: 700px) {
     padding-bottom: 57%;
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-1.jpg);
+    background-image: url({{ 'christy-natsumi-glint-1.jpg' | asset_url }});
   }
 }
 
@@ -94,10 +94,10 @@
 
 // footer doesnt have defined proportional width/height...text dictates that
 .lookbook--glint__footer {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-22-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-22-m.jpg' | asset_url }});
 
   @media (min-width: 1020px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-22.jpg);
+    background-image: url({{ 'christy-natsumi-glint-22.jpg' | asset_url }});
   }
 }
 
@@ -133,7 +133,7 @@
 
 
 .lookbook--glint__footerLogo {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-logo.png);
+  background-image: url({{ 'christy-natsumi-glint-logo.png' | asset_url }});
   width: 100%;
   padding-bottom: 42%;
   margin-bottom: 3rem;
@@ -205,142 +205,142 @@
 // GLINT IMAGES
 
 .lookbook--glint__2 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-2-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-2-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-2.jpg);
+    background-image: url({{ 'christy-natsumi-glint-2.jpg' | asset_url }});
   }
 }
 .lookbook--glint__3 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-3-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-3-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-3.jpg);
+    background-image: url({{ 'christy-natsumi-glint-3.jpg' | asset_url }});
   }
 }
 .lookbook--glint__4 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-4-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-4-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-4.jpg);
+    background-image: url({{ 'christy-natsumi-glint-4.jpg' | asset_url }});
   }
 }
 .lookbook--glint__5 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-5-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-5-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-5.jpg);
+    background-image: url({{ 'christy-natsumi-glint-5.jpg' | asset_url }});
   }
 }
 .lookbook--glint__6 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-6-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-6-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-6.jpg);
+    background-image: url({{ 'christy-natsumi-glint-6.jpg' | asset_url }});
   }
 }
 .lookbook--glint__7 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-7-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-7-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-7.jpg);
+    background-image: url({{ 'christy-natsumi-glint-7.jpg' | asset_url }});
   }
 }
 .lookbook--glint__8 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-8-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-8-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-8.jpg);
+    background-image: url({{ 'christy-natsumi-glint-8.jpg' | asset_url }});
   }
 }
 .lookbook--glint__9 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-9-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-9-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-9.jpg);
+    background-image: url({{ 'christy-natsumi-glint-9.jpg' | asset_url }});
   }
 }
 .lookbook--glint__10 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-10-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-10-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-10.jpg);
+    background-image: url({{ 'christy-natsumi-glint-10.jpg' | asset_url }});
   }
 }
 .lookbook--glint__11 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-11-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-11-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-11.jpg);
+    background-image: url({{ 'christy-natsumi-glint-11.jpg' | asset_url }});
   }
 }
 .lookbook--glint__12 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-12-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-12-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-12.jpg);
+    background-image: url({{ 'christy-natsumi-glint-12.jpg' | asset_url }});
   }
 }
 .lookbook--glint__13 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-13-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-13-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-13.jpg);
+    background-image: url({{ 'christy-natsumi-glint-13.jpg' | asset_url }});
   }
 }
 .lookbook--glint__14 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-14-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-14-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-14.jpg);
+    background-image: url({{ 'christy-natsumi-glint-14.jpg' | asset_url }});
   }
 }
 .lookbook--glint__15 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-15-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-15-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-15.jpg);
+    background-image: url({{ 'christy-natsumi-glint-15.jpg' | asset_url }});
   }
 }
 .lookbook--glint__16 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-16-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-16-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-16.jpg);
+    background-image: url({{ 'christy-natsumi-glint-16.jpg' | asset_url }});
   }
 }
 .lookbook--glint__17 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-17-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-17-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-17.jpg);
+    background-image: url({{ 'christy-natsumi-glint-17.jpg' | asset_url }});
   }
 }
 .lookbook--glint__18 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-18-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-18-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-18.jpg);
+    background-image: url({{ 'christy-natsumi-glint-18.jpg' | asset_url }});
   }
 }
 .lookbook--glint__19 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-19-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-19-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-19.jpg);
+    background-image: url({{ 'christy-natsumi-glint-19.jpg' | asset_url }});
   }
 }
 .lookbook--glint__20 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-20-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-20-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-20.jpg);
+    background-image: url({{ 'christy-natsumi-glint-20.jpg' | asset_url }});
   }
 }
 .lookbook--glint__21 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-21-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-21-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-21.jpg);
+    background-image: url({{ 'christy-natsumi-glint-21.jpg' | asset_url }});
   }
 }
