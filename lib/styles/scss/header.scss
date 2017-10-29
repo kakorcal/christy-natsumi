@@ -40,7 +40,7 @@
   max-width: 22rem;
   background-size: 100%;
   background-position: center;
-  background-image: url(../assets/images/christynatsumi-logo.png);
+  background-image: url({{ 'christynatsumi-logo.png' | asset_url }});
   background-repeat: no-repeat;
 
   @media (min-width: $screen-tablet) {
@@ -67,7 +67,7 @@
   left: $header-spacing-left;
   height: 100%;
   width: 200px;
-  background-image: url(../assets/images/christynatsumi-logo--mini-header.png);
+  background-image: url({{ 'christynatsumi-logo--mini-header.png' | asset_url }});
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -101,7 +101,7 @@
       }
 
       &.active {
-        background: #000 url("../assets/images/marker_bg.jpg") bottom;
+        background: #000 url({{ 'marker_bg.jpg' | asset_url }}) bottom;
 
         a {
           color: #fff;

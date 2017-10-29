@@ -1,4 +1,3 @@
-// this ordering is taken from the original squarespace template.conf file
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 /**
@@ -537,33 +536,33 @@ h4 {
 
 @font-face {
   font-family: 'dolce vita';
-  src: url('../assets/fonts/dolce_vita_heavy-webfont.eot');
-  src: url('../assets/fonts/dolce_vita_heavy-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../assets/fonts/dolce_vita_heavy-webfont.woff') format('woff'),
-  url('../assets/fonts/dolce_vita_heavy-webfont.ttf') format('truetype'),
-  url('../assets/fonts/dolce_vita_heavy-webfont.svg#dolce_vita_heavyafewXpounds') format('svg');
+  src: url({{ 'dolce_vita_heavy-webfont.eot' | asset_url }});
+  src: url({{ 'dolce_vita_heavy-webfont.eot?#iefix' | asset_url }}) format('embedded-opentype'),
+  url({{ 'dolce_vita_heavy-webfont.woff' | asset_url }}) format('woff'),
+  url({{ 'dolce_vita_heavy-webfont.ttf' | asset_url }}) format('truetype'),
+  url({{ 'dolce_vita_heavy-webfont.svg#dolce_vita_heavyafewXpounds' | asset_url }}) format('svg');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'dolce vita';
-  src: url('../assets/fonts/dolce_vita_light-webfont.eot');
-  src: url('../assets/fonts/dolce_vita_light-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../assets/fonts/dolce_vita_light-webfont.woff') format('woff'),
-  url('../assets/fonts/dolce_vita_light-webfont.ttf') format('truetype'),
-  url('../assets/fonts/dolce_vita_light-webfont.svg#dolce_vita_lightsuper_light') format('svg');
+  src: url({{ 'dolce_vita_light-webfont.eot' | asset_url }});
+  src: url({{ 'dolce_vita_light-webfont.eot?#iefix' | asset_url }}) format('embedded-opentype'),
+  url({{ 'dolce_vita_light-webfont.woff' | asset_url }}) format('woff'),
+  url({{ 'dolce_vita_light-webfont.ttf' | asset_url }}) format('truetype'),
+  url({{ 'dolce_vita_light-webfont.svg#dolce_vita_lightsuper_light' | asset_url }}) format('svg');
   font-weight: 100;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'dolce vita';
-  src: url('../assets/fonts/dolce_vita-webfont.eot');
-  src: url('../assets/fonts/dolce_vita-webfont.eot?#iefix') format('embedded-opentype'),
-  url('../assets/fonts/dolce_vita-webfont.woff') format('woff'),
-  url('../assets/fonts/dolce_vita-webfont.ttf') format('truetype'),
-  url('../assets/fonts/dolce_vita-webfont.svg#dolce_vitaquite_regular') format('svg');
+  src: url({{ 'dolce_vita-webfont.eot'| asset_url }});
+  src: url({{ 'dolce_vita-webfont.eot?#iefix'| asset_url }}) format('embedded-opentype'),
+  url({{ 'dolce_vita-webfont.woff'| asset_url }}) format('woff'),
+  url({{ 'dolce_vita-webfont.ttf'| asset_url }}) format('truetype'),
+  url({{ 'dolce_vita-webfont.svg#dolce_vitaquite_regular'| asset_url }}) format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -744,7 +743,7 @@ img.full {
   max-width: 22rem;
   background-size: 100%;
   background-position: center;
-  background-image: url(../assets/images/christynatsumi-logo.png);
+  background-image: url({{ 'christynatsumi-logo.png' | asset_url }});
   background-repeat: no-repeat;
 
   @media (min-width: $screen-tablet) {
@@ -771,7 +770,7 @@ img.full {
   left: $header-spacing-left;
   height: 100%;
   width: 200px;
-  background-image: url(../assets/images/christynatsumi-logo--mini-header.png);
+  background-image: url({{ 'christynatsumi-logo--mini-header.png' | asset_url }});
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -805,7 +804,7 @@ img.full {
       }
 
       &.active {
-        background: #000 url("../assets/images/marker_bg.jpg") bottom;
+        background: #000 url({{ 'marker_bg.jpg' | asset_url }}) bottom;
 
         a {
           color: #fff;
@@ -904,7 +903,7 @@ img.full {
     padding-right: 1rem;
     font-size: 0;
     line-height: 0;
-    background: #000 url(../assets/images/marker_bg.jpg) bottom;
+    background: #000 url({{ 'marker_bg.jpg' | asset_url }}) bottom;
 
     ul {
       text-align: right;
@@ -1087,11 +1086,11 @@ img.full {
     transition: all 500ms cubic-bezier(0.680, -0.550, 0.265, 1.550);
   }
   &:after {
-    background-image: url("../assets/images/drawerClosed.png");
+    background-image: url({{ 'drawerClosed.png' | asset_url }});
     transform: scale3d(1,1,1);
   }
   &:before {
-    background-image: url("../assets/images/drawerOpen.png");
+    background-image: url({{ 'drawerOpen.png' | asset_url }});
     opacity: 0;
     transform: scale3d(0.5,0.5,1);
   }
@@ -1472,7 +1471,7 @@ textarea,
   text-align: center;
   font-weight: bold !important;
   color: #fff;
-  background: #000 url(../assets/images/marker_bg2.jpg) bottom center;
+  background: #000 url({{ 'marker_bg2.jpg' | asset_url }}) bottom center;
   border: 1px solid #000;
   cursor: pointer;
 
@@ -1519,7 +1518,7 @@ button {
     top: 0;
     right: -18%;
 
-    background-image: url(../assets/images/btnFwd.png);
+    background-image: url({{ 'btnFwd.png' | asset_url }});
     background-size: 100% 100%;
   }
 }
@@ -1536,7 +1535,7 @@ button {
     top: 0;
     left: -18%;
 
-    background-image: url(../assets/images/btnBack.png);
+    background-image: url({{ 'btnBack.png' | asset_url }});
     background-size: 100% 100%;
   }
 }
@@ -1585,7 +1584,7 @@ button {
   }
 
   border-bottom: none;
-  background-image: url(../assets/images/christynatsumi-header--home-mobile-2017.06.jpg);
+  background-image: url({{ 'christynatsumi-header--home-mobile-2017.06.jpg' | asset_url }});
   background-size: cover;
   background-position: center top;
   height: 50vh;
@@ -1601,7 +1600,7 @@ button {
     height: calc("100vh - 100px");
     max-height: none;
     background-position: left top;
-    background-image: url(../assets/images/christynatsumi-header--home-2017.06.jpg);
+    background-image: url({{ 'christynatsumi-header--home-2017.06.jpg' | asset_url }});
     //background-size: 100%;
     //padding-bottom: 44%;
   }
@@ -1738,42 +1737,42 @@ button {
 
 
 .cn-home__homeMenuImage--shop {
-  background-image: url(../assets/images/home/homeMenuImage--shop--1x1.jpg);
+  background-image: url({{ 'homeMenuImage--shop--1x1.jpg' | asset_url }});
 
   @media (min-width: $screen-desktop) {
-    background-image: url(../assets/images/home/homeMenuImage--shop.jpg);
+    background-image: url({{ 'homeMenuImage--shop.jpg' | asset_url }});
   }
 }
 .cn-home__homeMenuImage--custom {
-  background-image: url(../assets/images/home/homeMenuImage--custom--1x1.jpg);
+  background-image: url({{ 'homeMenuImage--custom--1x1.jpg' | asset_url }});
 
   @media (min-width: $screen-desktop) {
-    background-image: url(../assets/images/home/homeMenuImage--custom.jpg);
+    background-image: url({{ 'homeMenuImage--custom.jpg' | asset_url }});
   }
 }
 .cn-home__homeMenuImage--about {
-  background-image: url(../assets/images/home/homeMenuImage--about--1x1.jpg);
+  background-image: url({{ 'homeMenuImage--about--1x1.jpg' | asset_url }});
 
   @media (min-width: $screen-desktop) {
-    background-image: url(../assets/images/home/homeMenuImage--about.jpg);
+    background-image: url({{ 'homeMenuImage--about.jpg' | asset_url }});
   }
 }
 .cn-home__homeMenuImage--email {
   cursor: default;
-  background-image: url(../assets/images/home/homeMenuImage--email--1x1.jpg);
+  background-image: url({{ 'homeMenuImage--email--1x1.jpg' | asset_url }});
 
   @media (min-width: $screen-desktop) {
-    background-image: url(../assets/images/home/homeMenuImage--email.jpg);
+    background-image: url({{ 'homeMenuImage--email.jpg' | asset_url }});
   }
 }
 
 
 .cn-heroimage--about {
-  background-image: url("../assets/images/about/christynatsumi-about-heroimage-mobile.jpg");
+  background-image: url({{ 'christynatsumi-about-heroimage-mobile.jpg' | asset_url }});
 
   @media (min-width: $screen-tablet) {
     padding-bottom: 48%;
-    background-image: url("../assets/images/about/christynatsumi-about-heroimage.jpg");
+    background-image: url({{ 'christynatsumi-about-heroimage.jpg' | asset_url }});
   }
 }
 
@@ -2087,11 +2086,11 @@ button {
   }
 }
 .cn-heroimage--custom {
-  background-image: url("../assets/images/custom/christynatsumi-custom-heroimage-mobile.jpg");
+  background-image: url({{ 'christynatsumi-custom-heroimage-mobile.jpg' | asset_url }});
 
   @media (min-width: $screen-tablet) {
     padding-bottom: 48%;
-    background-image: url("../assets/images/custom/christynatsumi-custom-heroimage.jpg");
+    background-image: url({{ 'christynatsumi-custom-heroimage.jpg' | asset_url }});
   }
 }
 
@@ -2350,13 +2349,13 @@ button {
 
 
 .lookbook--glint__header {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-1-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-1-m.jpg' | asset_url }});
   padding-bottom: 100%;
 
 
   @media (min-width: 700px) {
     padding-bottom: 57%;
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-1.jpg);
+    background-image: url({{ 'christy-natsumi-glint-1.jpg' | asset_url }});
   }
 }
 
@@ -2364,10 +2363,10 @@ button {
 
 // footer doesnt have defined proportional width/height...text dictates that
 .lookbook--glint__footer {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-22-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-22-m.jpg' | asset_url }});
 
   @media (min-width: 1020px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-22.jpg);
+    background-image: url({{ 'christy-natsumi-glint-22.jpg' | asset_url }});
   }
 }
 
@@ -2403,7 +2402,7 @@ button {
 
 
 .lookbook--glint__footerLogo {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-logo.png);
+  background-image: url({{ 'christy-natsumi-glint-logo.png' | asset_url }});
   width: 100%;
   padding-bottom: 42%;
   margin-bottom: 3rem;
@@ -2475,143 +2474,143 @@ button {
 // GLINT IMAGES
 
 .lookbook--glint__2 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-2-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-2-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-2.jpg);
+    background-image: url({{ 'christy-natsumi-glint-2.jpg' | asset_url }});
   }
 }
 .lookbook--glint__3 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-3-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-3-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-3.jpg);
+    background-image: url({{ 'christy-natsumi-glint-3.jpg' | asset_url }});
   }
 }
 .lookbook--glint__4 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-4-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-4-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-4.jpg);
+    background-image: url({{ 'christy-natsumi-glint-4.jpg' | asset_url }});
   }
 }
 .lookbook--glint__5 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-5-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-5-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-5.jpg);
+    background-image: url({{ 'christy-natsumi-glint-5.jpg' | asset_url }});
   }
 }
 .lookbook--glint__6 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-6-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-6-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-6.jpg);
+    background-image: url({{ 'christy-natsumi-glint-6.jpg' | asset_url }});
   }
 }
 .lookbook--glint__7 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-7-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-7-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-7.jpg);
+    background-image: url({{ 'christy-natsumi-glint-7.jpg' | asset_url }});
   }
 }
 .lookbook--glint__8 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-8-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-8-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-8.jpg);
+    background-image: url({{ 'christy-natsumi-glint-8.jpg' | asset_url }});
   }
 }
 .lookbook--glint__9 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-9-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-9-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-9.jpg);
+    background-image: url({{ 'christy-natsumi-glint-9.jpg' | asset_url }});
   }
 }
 .lookbook--glint__10 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-10-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-10-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-10.jpg);
+    background-image: url({{ 'christy-natsumi-glint-10.jpg' | asset_url }});
   }
 }
 .lookbook--glint__11 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-11-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-11-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-11.jpg);
+    background-image: url({{ 'christy-natsumi-glint-11.jpg' | asset_url }});
   }
 }
 .lookbook--glint__12 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-12-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-12-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-12.jpg);
+    background-image: url({{ 'christy-natsumi-glint-12.jpg' | asset_url }});
   }
 }
 .lookbook--glint__13 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-13-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-13-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-13.jpg);
+    background-image: url({{ 'christy-natsumi-glint-13.jpg' | asset_url }});
   }
 }
 .lookbook--glint__14 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-14-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-14-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-14.jpg);
+    background-image: url({{ 'christy-natsumi-glint-14.jpg' | asset_url }});
   }
 }
 .lookbook--glint__15 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-15-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-15-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-15.jpg);
+    background-image: url({{ 'christy-natsumi-glint-15.jpg' | asset_url }});
   }
 }
 .lookbook--glint__16 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-16-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-16-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-16.jpg);
+    background-image: url({{ 'christy-natsumi-glint-16.jpg' | asset_url }});
   }
 }
 .lookbook--glint__17 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-17-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-17-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-17.jpg);
+    background-image: url({{ 'christy-natsumi-glint-17.jpg' | asset_url }});
   }
 }
 .lookbook--glint__18 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-18-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-18-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-18.jpg);
+    background-image: url({{ 'christy-natsumi-glint-18.jpg' | asset_url }});
   }
 }
 .lookbook--glint__19 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-19-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-19-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-19.jpg);
+    background-image: url({{ 'christy-natsumi-glint-19.jpg' | asset_url }});
   }
 }
 .lookbook--glint__20 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-20-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-20-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-20.jpg);
+    background-image: url({{ 'christy-natsumi-glint-20.jpg' | asset_url }});
   }
 }
 .lookbook--glint__21 {
-  background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-21-m.jpg);
+  background-image: url({{ 'christy-natsumi-glint-21-m.jpg' | asset_url }});
 
   @media (min-width: 700px) {
-    background-image: url(../assets/images/lookbook/glint/christy-natsumi-glint-21.jpg);
+    background-image: url({{ 'christy-natsumi-glint-21.jpg' | asset_url }});
   }
 }
 //TODO: refactor this css when next lookbook is released - this was a copy+paste job from the old site
@@ -3058,10 +3057,10 @@ button {
     background-size: 100%;
     background-repeat: no-repeat;
     &.sold-out {
-      background-image: url("../assets/images/status_soldout_sm.png");
+      background-image: url({{ 'status_soldout_sm.png' | asset_url }});
     }
     &.sale {
-      background-image: url("../assets/images/status_sale_sm.png");
+      background-image: url({{ 'status_sale_sm.png' | asset_url }});
     }
 
     @media (min-width: $screen-tablet) and (max-width: $screen-desktop-1) {
@@ -3127,508 +3126,8 @@ button {
       position: absolute;
       top: 0.3rem;
       left: 0;
-      content: '
-//2 col layout for mobile
-.cn-categoryproduct {
-  font-size: 1rem;
-  position: relative;
-  display: inline-block;
-  width: 49%;
-  margin: 0 2% 16% 0;
-  text-decoration: none;
-  text-align: center;
-  vertical-align: top;
-  color: #666;
-
-  &:nth-child(even) {
-    margin-right: 0;
-  }
-
-  //3 col layout for tablet portrait
-  @media (min-width: $screen-tablet) {
-    width: 32%;
-    margin: 0 2% 8% 0;
-
-    &:nth-child(even) {
-      margin-right: 2%;
-    }
-    &:nth-child(3n) {
-      margin-right: 0;
-    }
-  }
-  //4 col layout for web
-  @media (min-width: $screen-desktop) {
-    width: 23.5%;
-
-    &:nth-child(3n) {
-      margin-right: 2%;
-    }
-    &:nth-child(4n) {
-      margin-right: 0;
-    }
-    &:hover .cn-categoryproduct__title {
-      color: #111;
-      border-bottom: 1px solid #111;
-    }
-  }
-
-
-  //product status styles
-  .product-mark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 0; //hides default text
-
-    background-size: 45%;
-    background-repeat: no-repeat;
-    background-position: 2vw 2vw;
-
-    @media screen and (min-width: $screen-tablet) {
-      background-position: 1vw 1vw;
-    }
-    &.sold-out {
-      background-image: url("../assets/images/status_soldout.png");
-    }
-    &.sale {
-      background-image: url("../assets/images/status_sale.png");
-    }
-  }
-}
-
-
-.cn-categoryproduct__img {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
-  padding-bottom: 100%;
-  margin: 0;
-
-  opacity: 0;
-  transition: opacity .5s ease;
-
-  &.show {
-    opacity: 1;
-  }
-
-  &:after {
-    @include cn-vignette;
-  }
-}
-
-
-.cn-categoryproduct__title {
-  font-size: 1.3rem;
-  line-height: 1.6rem;
-  display: inline-block;
-
-  @media screen and (min-width: $screen-tablet) {
-    margin-top: 4%;
-    overflow: hidden;
-    font-size: 1.4rem;
-    line-height: 1.8rem;
-  }
-  @media screen and (min-width: $screen-desktop) {
-    font-size: 1.8rem;
-    line-height: 2.2rem;
-    border-bottom: 1px solid transparent;
-
-    @include fx-allFast;
-  }
-}
-//this is used on the front page - NOT on the products pages. see products-list.scss for those styles
-
-//product thumbnail overrides
-.summary-thumbnail-container {
-  width: 100% !important;
-  float: none !important;
-  padding-right: 0 !important;
-
-
-  //thumbnail fader
-  .summary-thumbnail:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-
-    box-shadow: inset 0 0 4vw 2vw #eee;
-    @media screen and (min-width: $screen-tablet) {
-      box-shadow: inset 0 0 2vw 1vw #eee;
-    }
-  }
-}
-
-
-//product measurements styles
-.cn-product-measurements p {
-  line-height: 2rem;
-  font-size: 1.6rem;
-  margin: 0.7rem 0 1rem 0 !important;
-  -webkit-font-smoothing: subpixel-antialiased;
-}
-
-
-//product status overrides
-.summary-product-status .product-mark {
-  top: 0 !important;
-  left: 0 !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  padding: 0 !important;
-  font-size: 0 !important;
-
-  background-size: 45% !important;
-  background-color: transparent !important;
-  background-repeat: no-repeat !important;
-
-  background-position: 2vw 2vw !important;
-  @media screen and (min-width: $screen-tablet) {
-    background-position: 1vw 1vw !important;
-  }
-
-  &.sold-out {
-    background-image: url("../assets/images/status_soldout.png");
-  }
-  &.sale {
-    background-image: url("../assets/images/status_sale.png");
-  }
-}
-
-
-//product title overrides
-.summary-content {
-  float: none !important;
-  width: 100% !important;
-  text-align: center;
-
-
-  .summary-title {
-    margin: 4% 0 0 0 !important;
-    @include dolceVita;
-
-    font-size: 1.4rem !important;
-    line-height: 1.8rem !important;
-    @media screen and (min-width: $screen-tablet) {
-      font-size: 1.6rem !important;
-      line-height: 2rem !important;
-    }
-    @media screen and (min-width: $screen-desktop) {
-      font-size: 1.8rem !important;
-      line-height: 2.2rem !important;
-    }
-
-    a {
-      text-decoration: none;
-      color: #666;
-
-      @media screen and (min-width: $screen-desktop) {
-        border-bottom: 1px solid transparent;
-        transition: all 200ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-      }
-    }
-  }
-}
-
-
-
-
-//product list overrides
-.sqs-block-summary-v2 .summary-block-wrapper {
-
-
-  //2 col layout for mobile
-  .summary-item {
-    display: inline-block;
-    position: relative;
-    text-align: center;
-    vertical-align: top;
-    padding: 0 0 1px 0 !important; //1px for hover border
-
-
-    @media screen and (min-width: $screen-desktop) {
-      &:hover .summary-title a {
-        color: #111;
-        border-bottom: 1px solid #111 !important;
-      }
-    }
-
-
-    margin: 0 2% 16% 0 !important;
-    width: 49%;
-    &:nth-child(even) {
-      margin-right: 0 !important;
-    }
-
-    //3 col layout for tablet portrait
-    @media (min-width: $screen-tablet) {
-      margin: 0 2% 8% 0 !important;
-      width: 32%;
-
-      &:nth-child(even) {
-        margin-right: 2% !important;
-      }
-
-      &:nth-child(3n) {
-        margin-right: 0 !important;
-      }
-    }
-
-    //4 col layout for web
-    @media (min-width: $screen-desktop) {
-      margin: 0 2% 8% 0 !important;
-      width: 23.5%;
-
-      &:nth-child(3n) {
-        margin-right: 2% !important;
-      }
-      &:nth-child(4n) {
-        margin-right: 0 !important;
-      }
-    }
-  }
-}
-
-
-
-//grid overrides
-.sqs-gallery-design-list .sqs-gallery-design-list-slide:not(.no-image) .sqs-gallery-image-container {
-  width: 100% !important;
-}
-.sqs-gallery-design-list .sqs-gallery-design-list-slide:not(.no-image) .sqs-gallery-meta-container {
-  width: 100% !important;
-}
-.sqs-block.summary-v2-block.sqs-block-summary-v2 {
-  padding: 0 !important;
-}
-.sqs-layout > .sqs-row {
-  margin: 0;
-}
-.sqs-block {
-  padding: 0 !important;
-}
-
-.cn-journal {
-
-  article {
-    margin-bottom: 12rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid #000;
-
-    font-size: 1.4rem;
-  }
-
-  h1 {
-    margin-bottom: 3rem;
-    margin-top: 0;
-  }
-
-  .sqs-block-html .sqs-block-content>*:last-child { //squarespace override
-    margin-bottom: 3rem;
-  }
-
-  .title a {
-    font-size: 6rem;
-    text-decoration: none;
-    color: #444;
-    border-bottom: 1px solid transparent;
-
-    &:hover {
-      color: #000;
-      border-bottom-color: #000;
-    }
-  }
-
-
-  nav {
-    text-align: center;
-
-    a {
-      @include button;
-      position: relative;
-
-      &:first-child {
-        @include cn-btn_backArrow;
-        margin-right: 6rem;
-      }
-      &:last-child {
-        @include cn-btn_fwdArrow;
-      }
-    }
-
-    a.disabled {
-      opacity: 0.5;
-      pointer-events: none;
-    }
-  }
-
-
-  //SIDEBAR
-  .cn-sidebar {
-    display: none;
-
-    @media (min-width: $screen-desktop) {
-      display: inline-block;
-    }
-  }
-
-  .cn-sidebar__bio {
-    text-align: center;
-  }
-
-  .cn-sidebar__bio__bioPic {
-    display: inline-block;
-    width: 100%;
-    max-width: 210px;
-  }
-
-  .cn-sidebar__bio__fromsf {
-    margin-top: 1.5rem;
-    width: 100%;
-    max-width: 260px;
-  }
-
-  .cn-sidebar__bio__social {
-    margin: 3rem 0;
-
-    a {
-      border-radius: 50%;
-      background-color: #aaa;
-      display: inline-block;
-      font-size: 0;
-      text-align: center;
-      margin-right: 0.5rem;
-
-      &:last-child {
-        margin-right: 0;
-      }
-    }
-
-    img {
-      width: 4.4rem;
-      height: 4.4rem;
-    }
-  }
-
-
-  .image-block-outer-wrapper {
-    margin-bottom: 1rem;
-  }
-
-
-
-
-  .meta { //publish date and author (we dont need to show)
-    display: none !important;
-  }
-
-  .sqs-simple-like,
-  .squarespace-social-buttons,
-  .sqs-comment-link {
-    margin: 6rem 1rem 0 0;
-    color: #000 !important;
-    text-decoration: underline !important;
-  }
-
-  .squarespace-social-buttons {
-    display: inline-block;
-  }
-
-  .ss-social-button-wrapper {
-    width: auto !important;
-    padding: 0 !important;
-    background-image: none !important;
-    background-color: transparent !important;
-    box-shadow: none !important;
-  }
-
-  .ss-social-button {
-    font-weight: normal !important;
-    font-size: 1.4rem !important;
-    color: #000 !important;
-    text-decoration: underline !important;
-
-    background: 2px 2px no-repeat url(../assets/images/journal/icon-share.png) !important;
-    background-size: 16px !important;
-    background-position: 0% 40% !important;
-  }
-}
-.modal {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background-color: rgba(0,0,0,0.7);
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 350ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-}
-
-.modal__close {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255,0,0,0.2);
-}
-
-.modal--active {
-  pointer-events: auto;
-  opacity: 1;
-
-  .modal__content {
-    transform: translate3d(-50%, -50%, 0);
-  }
-}
-
-.modal__content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: calc(100% - 6rem);
-  max-width: 400px;
-  background-color: #111;
-  padding: 4rem 2rem;
-  box-shadow: 0 1rem 2rem 0 rgba(0,0,0,0.7);
-  border: 1px solid #666;
-  z-index: 1;
-  transition: transform 350ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
-  transform: translate3d(-50%, calc(-50% + 6rem), 0);
-}
-
-.modal__content__x {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 4rem;
-  height: 4rem;
-  cursor: pointer;
-  background-image: url("../assets/images/drawerOpen.png");
-  background-size: 100%;
-}
-
-.modal__content__body {
-  text-align: center;
-}
-.font--med--thin {
-  font-size: 2.5rem;
-  font-weight: lighter;
-  padding-bottom: 1.5rem;
-  margin: 0; //TODO: move this override out after dealing with h1, h2, etc styles
-}
-
-
-
-.color-white {
-  color: #fff;
-};
+      // TODO: this has to be a dollar sign, but shopify scss complier will recognize as token and not string
+      content: '';
       font-size: 2rem;
     }
   }
@@ -3644,7 +3143,7 @@ button {
       width: 100%;
       height: 100%;
       content: '';
-      background-image: url("../assets/images/strikeout.png");
+      background-image: url({{ 'strikeout.png' | asset_url }});
       background-size: 100% 100%;
       position: absolute;
     }
@@ -3794,10 +3293,10 @@ button {
       background-position: 1vw 1vw;
     }
     &.sold-out {
-      background-image: url("../assets/images/status_soldout.png");
+      background-image: url({{ 'status_soldout.png' | asset_url }});
     }
     &.sale {
-      background-image: url("../assets/images/status_sale.png");
+      background-image: url({{ 'status_sale.png' | asset_url }});
     }
   }
 }
@@ -3896,10 +3395,10 @@ button {
   }
 
   &.sold-out {
-    background-image: url("../assets/images/status_soldout.png");
+    background-image: url({{ 'status_soldout.png' | asset_url }});
   }
   &.sale {
-    background-image: url("../assets/images/status_sale.png");
+    background-image: url({{ 'status_sale.png' | asset_url }});
   }
 }
 
@@ -4156,7 +3655,7 @@ button {
     color: #000 !important;
     text-decoration: underline !important;
 
-    background: 2px 2px no-repeat url(../assets/images/journal/icon-share.png) !important;
+    background: 2px 2px no-repeat url({{ 'icon-share.png' | asset_url }}) !important;
     background-size: 16px !important;
     background-position: 0% 40% !important;
   }
@@ -4214,7 +3713,7 @@ button {
   width: 4rem;
   height: 4rem;
   cursor: pointer;
-  background-image: url("../assets/images/drawerOpen.png");
+  background-image: url({{ 'drawerOpen.png' | asset_url }});
   background-size: 100%;
 }
 

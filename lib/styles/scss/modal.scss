@@ -51,7 +51,7 @@
   width: 4rem;
   height: 4rem;
   cursor: pointer;
-  background-image: url("../assets/images/drawerOpen.png");
+  background-image: url({{ 'drawerOpen.png' | asset_url }});
   background-size: 100%;
 }
 

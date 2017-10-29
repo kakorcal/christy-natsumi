@@ -15,7 +15,7 @@
   }
 
   border-bottom: none;
-  background-image: url(../assets/images/christynatsumi-header--home-mobile-2017.06.jpg);
+  background-image: url({{ 'christynatsumi-header--home-mobile-2017.06.jpg' | asset_url }});
   background-size: cover;
   background-position: center top;
   height: 50vh;
@@ -31,7 +31,7 @@
     height: calc("100vh - 100px");
     max-height: none;
     background-position: left top;
-    background-image: url(../assets/images/christynatsumi-header--home-2017.06.jpg);
+    background-image: url({{ 'christynatsumi-header--home-2017.06.jpg' | asset_url }});
     //background-size: 100%;
     //padding-bottom: 44%;
   }
@@ -168,32 +168,32 @@
 
 
 .cn-home__homeMenuImage--shop {
-  background-image: url(../assets/images/home/homeMenuImage--shop--1x1.jpg);
+  background-image: url({{ 'homeMenuImage--shop--1x1.jpg' | asset_url }});
 
   @media (min-width: $screen-desktop) {
-    background-image: url(../assets/images/home/homeMenuImage--shop.jpg);
+    background-image: url({{ 'homeMenuImage--shop.jpg' | asset_url }});
   }
 }
 .cn-home__homeMenuImage--custom {
-  background-image: url(../assets/images/home/homeMenuImage--custom--1x1.jpg);
+  background-image: url({{ 'homeMenuImage--custom--1x1.jpg' | asset_url }});
 
   @media (min-width: $screen-desktop) {
-    background-image: url(../assets/images/home/homeMenuImage--custom.jpg);
+    background-image: url({{ 'homeMenuImage--custom.jpg' | asset_url }});
   }
 }
 .cn-home__homeMenuImage--about {
-  background-image: url(../assets/images/home/homeMenuImage--about--1x1.jpg);
+  background-image: url({{ 'homeMenuImage--about--1x1.jpg' | asset_url }});
 
   @media (min-width: $screen-desktop) {
-    background-image: url(../assets/images/home/homeMenuImage--about.jpg);
+    background-image: url({{ 'homeMenuImage--about.jpg' | asset_url }});
   }
 }
 .cn-home__homeMenuImage--email {
   cursor: default;
-  background-image: url(../assets/images/home/homeMenuImage--email--1x1.jpg);
+  background-image: url({{ 'homeMenuImage--email--1x1.jpg' | asset_url }});
 
   @media (min-width: $screen-desktop) {
-    background-image: url(../assets/images/home/homeMenuImage--email.jpg);
+    background-image: url({{ 'homeMenuImage--email.jpg' | asset_url }});
   }
 }
 

@@ -192,10 +192,10 @@
     background-size: 100%;
     background-repeat: no-repeat;
     &.sold-out {
-      background-image: url("../assets/images/status_soldout_sm.png");
+      background-image: url({{ 'status_soldout_sm.png' | asset_url }});
     }
     &.sale {
-      background-image: url("../assets/images/status_sale_sm.png");
+      background-image: url({{ 'status_sale_sm.png' | asset_url }});
     }
 
     @media (min-width: $screen-tablet) and (max-width: $screen-desktop-1) {
@@ -261,7 +261,8 @@
       position: absolute;
       top: 0.3rem;
       left: 0;
-      content: '$';
+      // TODO: this has to be a dollar sign, but shopify scss complier will recognize as token and not string
+      content: '';
       font-size: 2rem;
     }
   }
@@ -277,7 +278,7 @@
       width: 100%;
       height: 100%;
       content: '';
-      background-image: url("../assets/images/strikeout.png");
+      background-image: url({{ 'strikeout.png' | asset_url }});
       background-size: 100% 100%;
       position: absolute;
     }
