@@ -261,7 +261,8 @@
       position: absolute;
       top: 0.3rem;
       left: 0;
-      content: '$';
+      // TODO: this has to be a dollar sign, but shopify scss complier will recognize as token and not string
+      content: '';
       font-size: 2rem;
     }
   }
