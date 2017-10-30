@@ -1,14 +1,15 @@
-<div class="form-wrapper">  
+<div class="form-wrapper contact-form-wrapper">  
   {% form 'contact' %}
 
     {% if form.posted_successfully? %}
-      <div class="successForm feedback">
-        <p>Thank you! We will be in contact with you shortly.</p>
-      </div>
+      <p class="success">Thank you! We will be in contact with you shortly.</p>
+      <script>location.href = "#generalinquiries";</script>
     {% endif %} 
+
     {% if form.errors %}
       <p class="error">An error has occurred for the following field(s):</p>
       {{ form.errors | default_errors }}
+      <script>location.href = "#generalinquiries";</script>
     {% endif %}
 
     <div class="field-list">
@@ -30,36 +31,36 @@
       </div>
     </div>
     <div class="form-button-wrapper form-button-wrapper--align-center">
-        <input type="submit" class="button sqs-system-button sqs-editable-button" id="contactFormSubmit" formnovalidate value="Submit" />
+        <input type="submit" class="button sqs-system-button sqs-editable-button" id="contactFormSubmit" value="Submit" />
     </div>
   {% endform %}
 </div>
 
 <script>
-  var $form = $(".form-wrapper form");
-  console.log($form);
-  $(".form-wrapper form").validate({
-    // Specify validation rules
-    rules: {
-      // The key name on the left side is the name attribute
-      // of an input field. Validation rules are defined on the right side
-      "contact[name]": "required",
-      "contact[email]": {
-        required: true,
-        email: true
+  (function() {
+    $(".contact-form-wrapper form#contact_form").validate({
+      // Specify validation rules
+      rules: {
+        // The key name on the left side is the name attribute
+        // of an input field. Validation rules are defined on the right side
+        "contact[name]": "required",
+        "contact[email]": {
+          required: true,
+          email: true
+        },
+        "contact[subject]": "required",
+        "contact[message]": "required"
       },
-      "contact[subject]": "required",
-      "contact[message]": "required"
-    },
-    // Specify validation error messages
-    messages: {
-      "contact[name]": "Please enter your name",
-      "contact[email]": "Please enter a valid email address",
-      "contact[subject]": "Please enter your subject",
-      "contact[message]": "Please enter your message"
-    },
-    submitHandler: function(form) {
-      form.submit();
-    }
-  });
+      // Specify validation error messages
+      messages: {
+        "contact[name]": "Please enter your name",
+        "contact[email]": "Please enter a valid email address",
+        "contact[subject]": "Please enter your subject",
+        "contact[message]": "Please enter your message"
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+  })();
 </script>

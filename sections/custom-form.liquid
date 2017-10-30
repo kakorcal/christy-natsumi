@@ -1,66 +1,66 @@
-{% form 'contact' %}
+<div class="form-wrapper custom-form-wrapper">  
+  {% form 'contact' %}
 
-  {% if form.posted_successfully? %}
-    <div class="successForm feedback">
-        <p>Thank you! We will be in contact with you shortly.</p>
+    {% if form.posted_successfully? %}
+      <p class="success">Thank you! We will be in contact with you shortly.</p>
+      <script>location.href = "#howtoorder";</script>
+    {% endif %} 
+    
+    {% if form.errors %}
+      <p class="error">An error has occurred for the following field(s):</p>
+      {{ form.errors | default_errors }}
+      <script>location.href = "#howtoorder";</script>
+    {% endif %}
+
+    <div class="field-list">
+      <div class="form-item field">
+          <label class="title" for="contactFormName">Name <span class="required">*</span></label>
+          <input class="field-element text" type="text" id="contactFormName" name="contact[name]" required>
+      </div>
+      <div class="form-item field">
+          <label class="title" for="contactFormEmail">Email <span class="required">*</span></label>
+          <input class="field-element" type="email" id="contactFormEmail" name="contact[email]" required>
+      </div>
+      <div class="form-item field">
+          <label class="title" for="contactFormSubject">Subject <span class="required">*</span></label>
+          <input class="field-element text" type="text" id="contactFormSubject" name="contact[subject]" required>
+      </div>
+      <div class="form-item field">
+          <label class="title" for="contactFormMessage">Message <span class="required">*</span></label>
+          <textarea class="field-element" id="contactFormMessage" name="contact[message]" required></textarea>
+      </div>
     </div>
-  {% endif %} 
-  {% if form.errors %}
-    <div class="errorForm feedback">
-        <!-- {{ form.errors.size }} or {{ form.errors | size }} -->
-        <p>Your contact form has {{ form.errors | size | pluralize: "an error", "a few errors" }}. To submit your form, make the following changes and try again:</p>
-        {% for field in form.errors %}
-        <p>The {{ field | capitalize | replace: 'Body', 'Message' }} field {{ form.errors.messages[field] }}.</p>
-        {% endfor %}
+    <div class="form-button-wrapper form-button-wrapper--align-center">
+        <input type="submit" class="button sqs-system-button sqs-editable-button" id="contactFormSubmit" value="Submit" />
     </div>
-  {% endif %}
+  {% endform %}
+</div>
 
-  <div id="contactFormWrapper">
-      <p>
-          <label>{{ 'contact.form.name' | t }}</label>
-          <input type="text" required id="contactFormName" name="contact[name]">
-      </p>
-      <p>
-          <label>{{ 'contact.form.email' | t }}</label>
-          <input type="email" required id="contactFormEmail" name="contact[email]">
-      </p>
-      <p>
-          <label>{{ 'contact.form.phone' | t }}</label>
-          <input type="telephone" required id="contactFormTelephone" name="contact[phone]">
-      </p>
-      <p>
-          <label>{{ 'contact.form.message' | t }}</label>
-          <textarea required rows="10" id="contactFormMessage" name="contact[body]"></textarea>
-      </p>
-      <p>
-          <input type="submit" id="contactFormSubmit" value="{{ 'contact.form.send' | t }}" />
-      </p>
-  </div>
-{% endform %}
-<style>
-.contact-form {
-    margin: 1em 0
-}
-
-.feedback {
-    padding: 0.5em 0.7em;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    border-radius: 5px
-}
-
-.feedback p {
-    padding: 0.5em 0 !important;
-    margin: 0 !important
-}
-
-.successForm {
-    background: #bde0a8;
-    color: green
-}
-
-.errorForm {
-    background: #eebdbd;
-    color: red
-}
-</style>
+<script>
+  (function() {
+    $(".custom-form-wrapper form#contact_form").validate({
+      // Specify validation rules
+      rules: {
+        // The key name on the left side is the name attribute
+        // of an input field. Validation rules are defined on the right side
+        "contact[name]": "required",
+        "contact[email]": {
+          required: true,
+          email: true
+        },
+        "contact[subject]": "required",
+        "contact[message]": "required"
+      },
+      // Specify validation error messages
+      messages: {
+        "contact[name]": "Please enter your name",
+        "contact[email]": "Please enter a valid email address",
+        "contact[subject]": "Please enter your subject",
+        "contact[message]": "Please enter your message"
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+  })();
+</script>
