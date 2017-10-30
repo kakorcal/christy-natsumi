@@ -337,8 +337,14 @@ assets/icons.ttf:
   production: 2017-08-13T17:39:48-04:00   0678272006d7b08a523ae6973a72d181
 assets/icons.woff:
   production: 2017-08-13T17:39:48-04:00   6d64bee3b4d239a6cf6af98045a95954
+assets/instafeed.min.js:
+  production: 2017-10-29T20:10:25-04:00   1b9d5439b41e462220f9e6937df15b60
+assets/main-custom.js:
+  production: 2017-10-29T20:10:22-04:00   1f93e5c6316ca22111073479d61f71cb
+assets/main-home.js:
+  production: 2017-10-29T20:10:26-04:00   953b6023bb58c76b5640b85b4d743d24
 assets/main.scss.liquid:
-  production: 2017-10-29T06:02:32-04:00   b94ae204d49302a74e62c879889efc10
+  production: 2017-10-29T20:10:22-04:00   b5eca7a5ecd910da1935fc1dad9cfbf0
 assets/marker-bg.gif:
   production: 2017-10-29T06:03:10-04:00   79e69033da8b549ea0e6d5e987fd715a
 assets/marker_bg.jpg:
@@ -347,10 +353,22 @@ assets/marker_bg2.jpg:
   production: 2017-10-29T06:03:26-04:00   34f3b2df3604ffa1de3c7f069de662a8
 assets/modernizr.min.js:
   production: 2017-08-13T17:39:48-04:00   dc21cffad945a84cbbe770d52b1a0ded
+assets/products-item.js:
+  production: 2017-10-29T20:10:25-04:00   3bb4dd77cc09a72e11d0b6b0b882dc23
+assets/products-list.js:
+  production: 2017-10-29T20:10:23-04:00   185226d8e45086caa9cf32a56578c35d
 assets/respond-proxy.html:
   production: 2017-08-13T17:39:48-04:00   75002d74a330bff6bf069284da503b4c
 assets/respond.min.js:
   production: 2017-08-13T17:39:48-04:00   a2684e9b8fa50d6d11c56a9ada068528
+assets/shoppingcart.js:
+  production: 2017-10-29T20:10:20-04:00   c63c217ec1e53ef4174501479055fe2d
+assets/site-highlightNav.js:
+  production: 2017-10-29T20:10:19-04:00   b4da87d489c204afefeb4feeb760a7ba
+assets/site-toggleMiniHeader.js:
+  production: 2017-10-29T20:10:21-04:00   cd3031533ac6e5d79f1c2058b6d47971
+assets/site.js:
+  production: 2017-10-29T20:10:18-04:00   01aa4ba0bedd86b26d609ae9a28b70a7
 assets/status_sale.png:
   production: 2017-10-29T06:02:34-04:00   9e9c9791058e006fce2931e1100f3b04
 assets/status_sale_sm.png:
@@ -368,7 +386,7 @@ config/settings_data.json:
 config/settings_schema.json:
   production: 2017-08-13T18:37:56-04:00   4de50d8b26c23ea835a23162e448572d
 layout/theme.liquid:
-  production: 2017-10-28T18:32:53-04:00   303cfd4ab370db23c33e7f5662032192
+  production: 2017-10-29T20:10:18-04:00   6600263b4db87aa755c1d4d612e86c22
 locales/de.json:
   production: 2017-08-13T18:37:48-04:00   585899bd4424d43afa93b72083a5aa0e
 locales/en.default.json:
@@ -381,8 +399,15 @@ locales/pt-BR.json:
   production: 2017-08-13T18:37:41-04:00   3bc832b43077ef1681f2fe4be3eda8c9
 locales/pt-PT.json:
   production: 2017-08-13T18:37:38-04:00   6ddf443592f389ff55aa739569736f47
+sections/footer.liquid:
+  production: 2017-10-29T20:10:20-04:00   69d359afcd5ab2e77d20dadf0a85f838
+sections/header-custom.liquid:
+  production: 2017-10-29T20:10:22-04:00
 sections/header-home.liquid:
   development: 2017-10-29T17:40:34-04:00   0d61227290714b9734a829bf00fbea8a
+  production: 2017-10-29T20:10:26-04:00   2570ef1c882a122b06723e39af9f6371
+sections/header.liquid:
+  production: 2017-10-29T20:10:19-04:00
 snippets/ajax-cart-template.liquid:
   production: 2017-08-13T17:39:48-04:00   e6fa15367ab47a164d9dc8e47353c684
 snippets/blog-sidebar.liquid:
@@ -395,6 +420,10 @@ snippets/collection-sorting.liquid:
   production: 2017-08-13T17:39:48-04:00   d369d2d4697110800946220909e8ecf8
 snippets/comment.liquid:
   production: 2017-08-13T17:39:48-04:00   c766e42be8a74e05533d0e5a0e3a9ce3
+snippets/mobilenav.liquid:
+  production: 2017-10-29T20:10:24-04:00   31d48dda937478a84c3a205252e38f8d
+snippets/navigation.liquid:
+  production: 2017-10-29T20:10:21-04:00   62ec83c1d2828fefbf02e215e8d1a925
 snippets/oldIE-js.liquid:
   production: 2017-08-13T17:39:48-04:00   1197cc7109944206a600ed5caaef6a6f
 snippets/onboarding-empty-collection.liquid:
@@ -442,7 +471,7 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   production: 2017-08-13T17:39:49-04:00   c1ae0f8232e003fac57213d1353e513c
 templates/index.liquid:
-  production: 2017-08-13T17:39:49-04:00   aa449cd240994aa9787eef9d90b5b0f7
+  production: 2017-10-29T20:10:24-04:00   a99b095bf3dd4f27285a05da144b2ede
 templates/list-collections.liquid:
   production: 2017-08-13T17:39:49-04:00   380da281c4820602d95334029b03aa84
 templates/page.contact.liquid:
