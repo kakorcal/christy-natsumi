@@ -9,55 +9,36 @@
 
 {% endcomment %}
 
-<div class="grid">
+<main>
+    <div class="cn-wrapper cn-wrapper--top cn-contactpage">
+        <div class="row">
+            <div class="half">
+                <div class="cn-contactpage__map">
+                    <iframe class="cn-imageFrame" src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJuZnvE4aAhYAR9MpkvyAS0GE&key=AIzaSyC1wL53RHgOEkDbKztZBk0I2NiIqwm-oh4"></iframe>
+                </div>
+            </div>
+            <div class="half">
+                <p>Christy Natsumi's workshop is located in downtown San Francisco, CA. Consultation and private workshop visits are available by appointment only (no walk ins will be accepted). Looking forward to connecting with you!</p>
 
-  <div class="grid__item large--two-thirds push--large--one-sixth">
+                <div class="row row--btnRow">
+                    <div class="half">
+                        <span>schedule a</span>
+                        <a class="button" href="/workshop-visit">workshop visit</a>
+                    </div>
+                    <div class="half">
+                        <span>inquire about</span>
+                        <a class="button" href="/custom/#howtoorder">custom jewelry</a>
+                    </div>
+                </div>
 
-    <h1>{{ page.title }}</h1>
-
-    {% comment %}
-      Regular page content goes here.
-    {% endcomment %}
-    <div class="rte">
-      {{ page.content }}
+                <h3>general inquiries:</h3>
+                {% section 'contact-form' %}
+            </div>
+        </div>
     </div>
 
     {% comment %}
-      Contact form starts here
+      <!--Injection point for tracking scripts and user content from the code injection tab. Only used for confirmation page now-->
+      {squarespace-footers}
     {% endcomment %}
-    <div class="form-vertical">
-      {% form 'contact' %}
-
-        {% comment %}
-          Successful message
-        {% endcomment %}
-        {% if form.posted_successfully? %}
-          <p class="note form-success">
-            {{ 'contact.form.post_success' | t }}
-          </p>
-        {% endif %}
-
-        {{ form.errors | default_errors }}
-
-        {% assign name_attr = 'contact.form.name' | t | handle %}
-        <label for="ContactFormName" class="hidden-label">{{ 'contact.form.name' | t }}</label>
-        <input type="text" id="ContactFormName" class="input-full" name="contact[{{ name_attr }}]" placeholder="{{ 'contact.form.name' | t }}" autocapitalize="words" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.name }}{% endif %}">
-
-        <label for="ContactFormEmail" class="hidden-label">{{ 'contact.form.email' | t }}</label>
-        <input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="{{ 'contact.form.email' | t }}" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
-
-        {% assign name_attr = 'contact.form.phone' | t | handle %}
-        <label for="ContactFormPhone" class="hidden-label">{{ 'contact.form.phone' | t }}</label>
-        <input type="tel" id="ContactFormPhone" class="input-full" name="contact[{{ name_attr }}]" placeholder="{{ 'contact.form.phone' | t }}" pattern="[0-9\-]*" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
-
-        <label for="ContactFormMessage" class="hidden-label">{{ 'contact.form.message' | t }}</label>
-        <textarea rows="10" id="ContactFormMessage" class="input-full" name="contact[body]" placeholder="{{ 'contact.form.message' | t }}">{% if form.body %}{{ form.body }}{% endif %}</textarea>
-
-        <input type="submit" class="btn right" value="{{ 'contact.form.send' | t }}">
-
-      {% endform %}
-    </div>
-
-  </div>
-
-</div>
+</main>
