@@ -1,32 +1,35 @@
-<div class="form-vertical">
+<div class="form-wrapper">  
   {% form 'contact' %}
 
-    {% comment %}
-      Successful message
-    {% endcomment %}
     {% if form.posted_successfully? %}
-      <p class="note form-success">
-        {{ 'contact.form.post_success' | t }}
-      </p>
+      <div class="successForm feedback">
+        <p>Thank you! We will be in contact with you shortly.</p>
+      </div>
+    {% endif %} 
+    {% if form.errors %}
+      <p>{{ form.errors | default_errors }}</p>
     {% endif %}
 
-    {{ form.errors | default_errors }}
-
-    {% assign name_attr = 'contact.form.name' | t | handle %}
-    <label for="ContactFormName" class="hidden-label">{{ 'contact.form.name' | t }}</label>
-    <input type="text" id="ContactFormName" class="input-full" name="contact[{{ name_attr }}]" placeholder="{{ 'contact.form.name' | t }}" autocapitalize="words" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.name }}{% endif %}">
-
-    <label for="ContactFormEmail" class="hidden-label">{{ 'contact.form.email' | t }}</label>
-    <input type="email" id="ContactFormEmail" class="input-full" name="contact[email]" placeholder="{{ 'contact.form.email' | t }}" autocorrect="off" autocapitalize="off" value="{% if form.email %}{{ form.email }}{% elsif customer %}{{ customer.email }}{% endif %}">
-
-    {% assign name_attr = 'contact.form.phone' | t | handle %}
-    <label for="ContactFormPhone" class="hidden-label">{{ 'contact.form.phone' | t }}</label>
-    <input type="tel" id="ContactFormPhone" class="input-full" name="contact[{{ name_attr }}]" placeholder="{{ 'contact.form.phone' | t }}" pattern="[0-9\-]*" value="{% if form[name_attr] %}{{ form[name_attr] }}{% elsif customer %}{{ customer.phone }}{% endif %}">
-
-    <label for="ContactFormMessage" class="hidden-label">{{ 'contact.form.message' | t }}</label>
-    <textarea rows="10" id="ContactFormMessage" class="input-full" name="contact[body]" placeholder="{{ 'contact.form.message' | t }}">{% if form.body %}{{ form.body }}{% endif %}</textarea>
-
-    <input type="submit" class="btn right" value="{{ 'contact.form.send' | t }}">
-
+    <div class="field-list">
+      <div class="form-item field text required">
+          <label class="title">Name <span class="required">*</span></label>
+          <input class="field-element text" type="text"  id="contactFormName" name="contact[name]">
+      </div>
+      <div class="form-item field email required">
+          <label class="title">Email <span class="required">*</span></label>
+          <input class="field-element" type="email"  id="contactFormEmail" name="contact[email]">
+      </div>
+      <div class="form-item field text required">
+          <label class="title">Subject <span class="required">*</span></label>
+          <input class="field-element text" type="text" id="contactFormSubject" name="contact[subject]">
+      </div>
+      <div class="form-item field text required">
+          <label class="title">Message <span class="required">*</span></label>
+          <textarea class="field-element" id="contactFormMessage" name="contact[body]"></textarea>
+      </div>
+    </div>
+    <div class="form-button-wrapper form-button-wrapper--align-center">
+        <input type="submit" class="button sqs-system-button sqs-editable-button" id="contactFormSubmit" value="Submit" />
+    </div>
   {% endform %}
 </div>
