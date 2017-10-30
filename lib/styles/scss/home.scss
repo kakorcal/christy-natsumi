@@ -28,7 +28,7 @@
     //background-image: url(../assets/images/christynatsumi-header--home-2017.06.jpg);
   }
   @media (min-width: $screen-desktop-1) {
-    height: calc("100vh - 100px");
+    height: calc(100vh - 100px);
     max-height: none;
     background-position: left top;
     background-image: url({{ 'christynatsumi-header--home-2017.06.jpg' | asset_url }});
@@ -72,26 +72,26 @@
 }
 
 .cn-home__homeMenuImage--small {
-  width: calc("50% - 1px");
+  width: calc(50% - 1px);
 
   @media (min-width: $screen-tablet) {
-    width: calc("50% - 2px");
+    width: calc(50% - 2px);
   }
 
   @media (min-width: $screen-desktop) {
-    width: calc("38% - 2px");
+    width: calc(38% - 2px);
   }
 }
 
 .cn-home__homeMenuImage--big {
-  width: calc("50% - 1px");
+  width: calc(50% - 1px);
 
   @media (min-width: $screen-tablet) {
-    width: calc("50% - 2px");
+    width: calc(50% - 2px);
   }
 
   @media (min-width: $screen-desktop) {
-    width: calc("62% - 2px");
+    width: calc(62% - 2px);
   }
 }
 
@@ -111,7 +111,7 @@
   z-index: 2;
   transform: translate3d(0, -50%, 0);
   transition: all 150ms ease-in-out;
-  width: calc("100% - 4rem");
+  width: calc(100% - 4rem);
   margin: 0 2rem;
 }
 
@@ -132,10 +132,10 @@
   opacity: 0;
   top: 50%;
   left: 0;
-  width: calc("100% - 8rem");
+  width: calc(100% - 8rem);
   margin: 0 4rem;
   text-align: center;
-  transform: translate3d(0, calc("1.5rem - 50%"), 0);
+  transform: translate3d(0, calc(1.5rem - 50%), 0);
   transition: all 150ms ease-in-out;
 }
 
@@ -160,7 +160,7 @@
 
   .cn-home__homeMenuImage--email:hover {
     .cn-home__homeMenuImage__text {
-      transform: translate3d(0, calc("-1.5rem - 50%"), 0);
+      transform: translate3d(0, calc(-1.5rem - 50%), 0);
       opacity: 0;
     }
   }
