@@ -1480,7 +1480,18 @@ textarea,
   text-align: center;
 }
 
-.form-wrapper input[type=submit] {
+.shopify-challenge__container input[type=submit].shopify-challenge__button {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.form-wrapper input[type=submit], 
+.shopify-challenge__container input[type=submit].shopify-challenge__button {
   display: inline-block;
   width: auto;
   height: auto;
@@ -1504,6 +1515,29 @@ textarea,
   appearance: none;
   font-size: 14px;
   text-transform: none;
+}
+
+.form-wrapper .error,
+.form-wrapper .errors ul li {
+  color: red;
+  font-size: 14px;
+  list-style: none;
+  margin: 0;
+}
+
+#challenge .shopify-challenge__container {
+  margin-top: 4rem;
+
+  @media (min-width: $screen-tablet) {
+    margin-top: 8rem;
+  }
+  @media (min-width: $screen-desktop-1) {
+    margin-top: 12rem;
+  }
+}
+
+ul.shopify-challenge__error {
+  text-align: center;
 }
 
 // style all buttons the same and override squarespace stylings
