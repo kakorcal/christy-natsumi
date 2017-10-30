@@ -50,9 +50,15 @@
   Add the page template as a class for easy page or template specific styling.
 {% endcomment %}
 <body id="{{ page_title | handle }}" class="{% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
-    
-  {% section 'header-home' %}
 
+  {% if template == 'index' %}
+    {% section 'header-home' %}
+  {% elsif template == 'page.custom' %}
+    {% section 'header-custom' %}
+  {% else %}
+    {% section 'header' %}
+  {% endif %}
+    
   {{ content_for_layout }}
 
   {% section 'footer' %}
