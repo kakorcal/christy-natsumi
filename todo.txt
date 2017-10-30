@@ -1,4 +1,9 @@
-// products-item.scss:264 this has to be a dollar sign, but shopify scss complier will recognize as token and not string
-// contact form - use plugin?
-// page.contact.liquid:40 ask greg what this is for
-// page.about.liquid:6 ask greg what this is for
+• products-item.scss:264 this has to be a dollar sign, but shopify scss complier will recognize as token and not string
+• contact form - use plugin?
+• page.contact.liquid:40 ask greg what this is for
+• page.about.liquid:6 ask greg what this is for
+
+tmw
+- fix links on all pages
+- fix click handlers on all pages
+- fix contact form
