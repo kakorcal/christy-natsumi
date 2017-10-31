@@ -41,6 +41,8 @@ assets/20.jpg:
   production: 2017-10-29T06:03:05-04:00   dc8c12b73e6e54c060c4b0c3a49c39ef
 assets/about_fromsf.png:
   production: 2017-10-29T06:03:35-04:00   cd1ddbb471c4a502ee4d4f052e297f10
+assets/additional-methods.min.js:
+  production: 2017-10-31T07:10:32-04:00   ced61b5d0a48d60fc5522b02ca25570b
 assets/ajax-cart.js.liquid:
   production: 2017-08-13T17:39:48-04:00   5089d437026dde38c1918ea91324d35a
 assets/arcn-logo.png:
@@ -339,12 +341,14 @@ assets/icons.woff:
   production: 2017-08-13T17:39:48-04:00   6d64bee3b4d239a6cf6af98045a95954
 assets/instafeed.min.js:
   production: 2017-10-29T20:10:25-04:00   1b9d5439b41e462220f9e6937df15b60
+assets/jquery.validate.min.js:
+  production: 2017-10-31T07:10:29-04:00   93c1dd8416ac2af1850652d5b620a142
 assets/main-custom.js:
   production: 2017-10-29T20:10:22-04:00   1f93e5c6316ca22111073479d61f71cb
 assets/main-home.js:
   production: 2017-10-29T20:10:26-04:00   953b6023bb58c76b5640b85b4d743d24
 assets/main.scss.liquid:
-  production: 2017-10-29T22:15:41-04:00   3cb057111a4604d7994f6080f0f1a5f2
+  production: 2017-10-31T07:10:29-04:00   be491d89bfe50a2023ac7f8f6eb9b172
 assets/marker-bg.gif:
   production: 2017-10-29T06:03:10-04:00   79e69033da8b549ea0e6d5e987fd715a
 assets/marker_bg.jpg:
@@ -386,7 +390,7 @@ config/settings_data.json:
 config/settings_schema.json:
   production: 2017-08-13T18:37:56-04:00   4de50d8b26c23ea835a23162e448572d
 layout/theme.liquid:
-  production: 2017-10-29T22:15:42-04:00   f926be8525c61aeac297b7ba25a514c5
+  production: 2017-10-31T07:10:30-04:00   c24478b1816422ca9bd7753c83840eb9
 locales/de.json:
   production: 2017-08-13T18:37:48-04:00   585899bd4424d43afa93b72083a5aa0e
 locales/en.default.json:
@@ -400,7 +404,9 @@ locales/pt-BR.json:
 locales/pt-PT.json:
   production: 2017-08-13T18:37:38-04:00   6ddf443592f389ff55aa739569736f47
 sections/contact-form.liquid:
-  production: 2017-10-29T22:15:45-04:00   f52d61e1adb4e2793a0b8f7ff6cfacff
+  production: 2017-10-31T07:10:26-04:00   d9eb53b7cf630ec44bb88f59cfb20b8e
+sections/custom-form.liquid:
+  production: 2017-10-31T07:10:29-04:00   618bfdc78e364f0239870b3b2c48b106
 sections/footer.liquid:
   production: 2017-10-29T22:15:40-04:00   0f3502fd7a52cbdb04030105bfe3d8b4
 sections/header-custom.liquid:
@@ -423,7 +429,7 @@ snippets/collection-sorting.liquid:
 snippets/comment.liquid:
   production: 2017-08-13T17:39:48-04:00   c766e42be8a74e05533d0e5a0e3a9ce3
 snippets/mobilenav.liquid:
-  production: 2017-10-29T20:10:24-04:00   31d48dda937478a84c3a205252e38f8d
+  production: 2017-10-31T07:10:32-04:00   dc4489ed8ec2f7e90952034b39b0aea0
 snippets/navigation.liquid:
   production: 2017-10-29T20:10:21-04:00   62ec83c1d2828fefbf02e215e8d1a925
 snippets/oldIE-js.liquid:
@@ -441,7 +447,7 @@ snippets/respond.liquid:
 snippets/search-bar.liquid:
   production: 2017-08-13T17:39:49-04:00   733af687725a8174f1348c58f0d5a3e4
 snippets/sectnav-custom.liquid:
-  production: 2017-10-29T22:15:43-04:00   6d61597e1f6618fe773d6410d7e7354f
+  production: 2017-10-31T07:10:33-04:00   6e11f767b82057af6f70109fe213d247
 snippets/social-meta-tags.liquid:
   production: 2017-08-13T17:39:49-04:00   e7c97d7cb76c7925dd144dfb7b188cac
 snippets/tags-article.liquid:
@@ -475,19 +481,19 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   production: 2017-08-13T17:39:49-04:00   c1ae0f8232e003fac57213d1353e513c
 templates/index.liquid:
-  production: 2017-10-29T22:15:40-04:00   0e7145d4b8a21b56fcacb619a63b6bb0
+  production: 2017-10-31T07:10:28-04:00   4649c4550f93ca8d057dbbb6c8e3ecef
 templates/list-collections.liquid:
   production: 2017-08-13T17:39:49-04:00   380da281c4820602d95334029b03aa84
 templates/page.about.liquid:
-  production: 2017-10-29T22:15:45-04:00   dc8db7e91b92dc205fad287deedf38ac
+  production: 2017-10-31T07:10:27-04:00   2125a67874253fbf44772ff014466c17
 templates/page.contact.liquid:
-  production: 2017-10-29T22:15:39-04:00   2dfb99cada2c35a1bccb9cdd329eae72
+  production: 2017-10-31T07:10:32-04:00   ac6c47895432d316a1be5edd3c0f5eda
 templates/page.custom.liquid:
-  production: 2017-10-29T22:15:45-04:00   fac957b0920984ae321f7f827c05ee58
+  production: 2017-10-31T07:10:31-04:00   a7b89484b14b966771f9da4dba23f0df
 templates/page.faq.liquid:
-  production: 2017-10-29T22:15:43-04:00   d40393c09f0ac22ecb7c7e6c647a355c
+  production: 2017-10-31T07:10:27-04:00   5a550b2ef9239b3678a91c388f385dce
 templates/page.liquid:
-  production: 2017-08-13T17:39:49-04:00   32faec183321b6d7d9b4197ec3e05575
+  production: 2017-10-31T07:10:31-04:00   813d518c7cdc01755e9988f3213bcef5
 templates/page.lookbook.glint.liquid:
   production: 2017-10-29T22:15:42-04:00   65f06003a7e5d224163c12df9aa40dc5
 templates/product.liquid:
