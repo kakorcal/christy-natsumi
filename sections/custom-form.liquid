@@ -1,0 +1,129 @@
+<div class="form-wrapper custom-form-wrapper">  
+  <div class="form-inner-wrapper">
+    {% form 'contact' %}
+
+      {% if form.posted_successfully? %}
+        <p class="success">Thank you! We will be in contact with you shortly.</p>
+        <script>location.href = "#howtoorder";</script>
+      {% endif %} 
+      
+      {% if form.errors %}
+        <p class="error">An error has occurred for the following field(s):</p>
+        {{ form.errors | default_errors }}
+        <script>location.href = "#howtoorder";</script>
+      {% endif %}
+
+      <div class="field-list">
+        <div class="form-item field">
+            <label class="title" for="contactFormName">Name <span class="required">*</span></label>
+            <input class="field-element text" type="text" id="contactFormName" name="contact[name]" required>
+        </div>
+        <div class="form-item field">
+            <label class="title" for="contactFormEmail">Email <span class="required">*</span></label>
+            <input class="field-element" type="email" id="contactFormEmail" name="contact[email]" required>
+        </div>
+        <div class="form-item field">
+            <label class="title" for="contactFormLocation">Location <span class="required">*</span></label>
+            <input class="field-element" type="text" id="contactFormLocation" name="contact[location]" required>
+        </div>
+        <div class="form-item field">
+            <label class="title" for="contactFormPhone">Phone Number <span class="required">*</span></label>
+            <input class="field-element" type="tel" id="contactFormPhone" name="contact[phone]" required>
+        </div>
+        <div class="form-item field">
+            <label class="title" for="contactFormOccasion">Occasion <span class="required">*</span></label>
+            <textarea class="field-element" id="contactFormOccasion" name="contact[occasion]" required></textarea>
+        </div>
+        <div class="form-item field select">
+          <label class="title" for="contactFormInterest">Interest <span class="required">*</span></label>
+          <select id="contactFormInterest" name="contact[interest]">
+              <option value="Ring">Ring</option>
+              <option value="Necklace">Necklace</option>
+              <option value="Earrings">Earrings</option>
+              <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form-item field select">
+          <label class="title" for="contactFormRequest">Service requested <span class="required">*</span></label>
+          <select id="contactFormRequest" name="contact[request]">
+              <option value="Customization">Customization</option>
+              <option value="Heirloom Redesign">Heirloom Redesign</option>
+              <option value="Full Custom Design">Full Custom Design</option>
+              <option value="Diamond/Gem Sourcing">Diamond/Gem Sourcing</option>
+              <option value="Combination of above – Please explain below">Combination of above – Please explain below</option>
+          </select>
+        </div>
+        <div class="form-item field">
+            <label class="title" for="contactFormDescription">A short description of the jewelry you'd like <span class="required">*</span></label>
+            <textarea class="field-element" id="contactFormDescription" name="contact[description]" required></textarea>
+        </div>
+        <div class="form-item field">
+            <label class="title" for="contactFormBudget">Budget range <span class="required">*</span></label>
+            <input class="field-element" type="text" id="contactFormBudget" name="contact[budget]" required>
+        </div>
+        <div class="form-item field">
+            <label class="title" for="contactFormDate">When would you ideally like your jewelry by? <span class="required">*</span></label>
+            <input class="field-element" type="text" id="contactFormDate" name="contact[date]" required>
+        </div>
+        <div class="form-item field checkbox">
+          <div class="title" for="contactFormCheckbox">Agree to Terms <span class="required">*</span></div>
+          <div class="option">
+            <label>
+              <div>Yes, I’ve read and understood the terms and conditions of working with Christy Natsumi on a customized, custom, or redesigned jewelry project, as outlined below.</div>
+              <input type="checkbox" id="contactFormCheckbox" name="contact[checkbox]" value="Yes, I’ve read and understood the terms and conditions of working with Christy Natsumi on a customized, custom, or redesigned jewelry project, as outlined below.">
+            </label>
+          </div>
+        </div>
+      </div>
+      <div class="form-button-wrapper form-button-wrapper--align-center">
+          <input type="submit" class="button sqs-system-button sqs-editable-button" id="contactFormSubmit" value="Submit" />
+      </div>
+    {% endform %}
+  </div>
+</div>
+
+<script>
+  (function() {
+    $(".custom-form-wrapper form#contact_form").validate({
+      // Specify validation rules
+      rules: {
+        // The key name on the left side is the name attribute
+        // of an input field. Validation rules are defined on the right side
+        "contact[name]": "required",
+        "contact[email]": {
+          required: true,
+          email: true
+        },
+        "contact[location]": "required",
+        "contact[phone]": {
+          required: true,
+          phoneUS: true
+        },
+        "contact[occasion]": "required",
+        "contact[interest]": "required",
+        "contact[request]": "required",
+        "contact[description]": "required",
+        "contact[budget]": "required",
+        "contact[date]": "required",
+        "contact[checkbox]": "required"
+      },
+      // Specify validation error messages
+      messages: {
+        "contact[name]": "Please enter your name",
+        "contact[email]": "Please enter a valid email address",
+        "contact[location]": "This field is required",
+        "contact[phone]": "Please enter a valid phone number",
+        "contact[occasion]": "This field is required",
+        "contact[interest]": "This field is required",
+        "contact[request]": "This field is required",
+        "contact[description]": "This field is required",
+        "contact[budget]": "This field is required",
+        "contact[date]": "This field is required",
+        "contact[checkbox]": "Please agree to the terms and conditions"
+      },
+      submitHandler: function(form) {
+        form.submit();
+      }
+    });
+  })();
+</script>
