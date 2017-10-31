@@ -462,8 +462,6 @@ templates/cart.liquid:
   production: 2017-08-13T17:39:49-04:00   49bbbe1b3bda19110f7e72abc158bb91
 templates/collection.liquid:
   production: 2017-08-13T17:39:49-04:00   c4a0532ffb42396661303a7fc87bd12d
-templates/collection.list.liquid:
-  production: 2017-08-13T17:39:49-04:00   a1f281a34a1926f2c6d010dbbdeee210
 templates/customers/account.liquid:
   production: 2017-08-13T17:39:49-04:00   da9e3584ef6699ac5c811b73b42c58db
 templates/customers/activate_account.liquid:
