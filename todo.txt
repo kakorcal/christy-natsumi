@@ -3,7 +3,12 @@
 • page.contact.liquid:40 ask greg what this is for
 • page.about.liquid:6 ask greg what this is for
 
-tmw
+10/30
 - fix links on all pages
 - fix click handlers on all pages
 - fix contact form
+
+10/31
+- research how the shop page works on shopify (including related products / wishlist)
+- create the collection/all page
+- categorize the products
