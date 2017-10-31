@@ -1525,6 +1525,10 @@ textarea,
   margin: 0;
 }
 
+.form-inner-wrapper .errors ul {
+  margin-left: 0;
+}
+
 .form-wrapper .success {
   color: green;
   background: lightgreen;
@@ -2268,12 +2272,16 @@ button, .button {
   .form-wrapper .field-list .field .option {
     @include defaultText;
     margin: 1.5rem 0 0 2rem !important;
+    position: relative;
 
 
     input {
       margin-top: 0.7rem;
       height: auto;
       margin-left: -2rem;
+      position: absolute;
+      top: 1px;
+      left: 0;
     }
   }
 }

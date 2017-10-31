@@ -110,6 +110,10 @@ textarea,
   margin: 0;
 }
 
+.form-inner-wrapper .errors ul {
+  margin-left: 0;
+}
+
 .form-wrapper .success {
   color: green;
   background: lightgreen;
