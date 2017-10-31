@@ -56,3 +56,20 @@
   <squarespace:script src="products-list.js" combo="false" />
 
 {% endcomment %}
+
+{% for product in collection.products %}
+  {% if product.images.size > 0 %}
+    <a class="cn-categoryproduct" href="{{ product.url }}">
+      <div class="cn-categoryproduct__img content-fill">
+        <img class="lazyload" src="{{ product.featured_image | img_url : 'grande' }}" alt="{{ product.featured_image.alt }}" />
+      </div>
+      <div class="cn-categoryproduct__title dolceVita">{{ product.title }}</div>
+
+      {% if product.available == false %}
+        <div class="product-mark sold-out">sold out</div>
+      {% endif %}
+    </a>
+  {% else %}
+    <a class="cn-categoryproduct">no product thumbnail</a>
+  {% endif %}
+{% endfor %}

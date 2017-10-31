@@ -41,8 +41,6 @@ assets/20.jpg:
   production: 2017-10-29T06:03:05-04:00   dc8c12b73e6e54c060c4b0c3a49c39ef
 assets/about_fromsf.png:
   production: 2017-10-29T06:03:35-04:00   cd1ddbb471c4a502ee4d4f052e297f10
-assets/additional-methods.min.js:
-  production: 2017-10-31T07:10:32-04:00   ced61b5d0a48d60fc5522b02ca25570b
 assets/ajax-cart.js.liquid:
   production: 2017-08-13T17:39:48-04:00   5089d437026dde38c1918ea91324d35a
 assets/arcn-logo.png:
@@ -341,8 +339,6 @@ assets/icons.woff:
   production: 2017-08-13T17:39:48-04:00   6d64bee3b4d239a6cf6af98045a95954
 assets/instafeed.min.js:
   production: 2017-10-29T20:10:25-04:00   1b9d5439b41e462220f9e6937df15b60
-assets/jquery.validate.min.js:
-  production: 2017-10-31T07:10:29-04:00   93c1dd8416ac2af1850652d5b620a142
 assets/main-custom.js:
   production: 2017-10-29T20:10:22-04:00   1f93e5c6316ca22111073479d61f71cb
 assets/main-home.js:
