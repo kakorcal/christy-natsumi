@@ -10,6 +10,10 @@
 {% endcomment %}
 
 <script>
+  // https://github.com/aFarkas/lazysizes
+  window.lazySizesConfig = window.lazySizesConfig || {};
+  window.lazySizesConfig.expand = 150;
+
   $(document).on('lazyloaded', function(e){
     $(e.target).parent().addClass('show');
   });
