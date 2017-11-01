@@ -2,6 +2,7 @@
 • contact form - use plugin?
 • page.contact.liquid:40 ask greg what this is for
 • page.about.liquid:6 ask greg what this is for
+• site.js:43 remove since we aren't using ImageLoader
 
 10/30
 - fix links on all pages
@@ -12,3 +13,7 @@
 - research how the shop page works on shopify (including related products / wishlist)
 - create the collection/all page
 - categorize the products
+
+11/1
+- product page
+- related products
