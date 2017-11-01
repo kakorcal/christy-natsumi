@@ -3402,14 +3402,20 @@ button, .button {
   position: relative;
   overflow: hidden;
   width: 100%;
-  padding-bottom: 100%;
   margin: 0;
+  padding-bottom: 100%;
 
-  opacity: 0;
-  transition: opacity .5s ease;
+  img.lazyload,
+  img.lazyloading {
+    opacity: 0;
+  }
 
-  &.show {
+  img.lazyloaded {
     opacity: 1;
+    transition: opacity .5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
   }
 
   &:after {
@@ -3422,6 +3428,7 @@ button, .button {
   font-size: 1.3rem;
   line-height: 1.6rem;
   display: inline-block;
+  opacity: 0;
 
   @media screen and (min-width: $screen-tablet) {
     margin-top: 4%;
@@ -3436,6 +3443,10 @@ button, .button {
 
     @include fx-allFast;
   }
+}
+
+.cn-categoryproduct__soldout {
+  opacity: 0;
 }
 //this is used on the front page - NOT on the products pages. see products-list.scss for those styles
 
