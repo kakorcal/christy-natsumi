@@ -41,6 +41,8 @@ assets/20.jpg:
   production: 2017-10-29T06:03:05-04:00   dc8c12b73e6e54c060c4b0c3a49c39ef
 assets/about_fromsf.png:
   production: 2017-10-29T06:03:35-04:00   cd1ddbb471c4a502ee4d4f052e297f10
+assets/additional-methods.min.js:
+  production: 2017-11-01T15:03:46-04:00   a079fc1149bd43498880e656beea06cd
 assets/ajax-cart.js.liquid:
   production: 2017-08-13T17:39:48-04:00   5089d437026dde38c1918ea91324d35a
 assets/arcn-logo.png:
@@ -339,12 +341,16 @@ assets/icons.woff:
   production: 2017-08-13T17:39:48-04:00   6d64bee3b4d239a6cf6af98045a95954
 assets/instafeed.min.js:
   production: 2017-10-29T20:10:25-04:00   1b9d5439b41e462220f9e6937df15b60
+assets/jquery.validate.min.js:
+  production: 2017-10-31T07:10:29-04:00   93c1dd8416ac2af1850652d5b620a142
+assets/lazysizes.min.js:
+  production: 2017-11-01T15:03:46-04:00   3150bf538edc0788afd7c673a0c5dfee
 assets/main-custom.js:
   production: 2017-10-29T20:10:22-04:00   1f93e5c6316ca22111073479d61f71cb
 assets/main-home.js:
   production: 2017-10-29T20:10:26-04:00   953b6023bb58c76b5640b85b4d743d24
 assets/main.scss.liquid:
-  production: 2017-10-31T07:10:29-04:00   be491d89bfe50a2023ac7f8f6eb9b172
+  production: 2017-11-01T15:03:41-04:00   df9f0f28bc40bdd9c508ab34e3018025
 assets/marker-bg.gif:
   production: 2017-10-29T06:03:10-04:00   79e69033da8b549ea0e6d5e987fd715a
 assets/marker_bg.jpg:
@@ -368,7 +374,7 @@ assets/site-highlightNav.js:
 assets/site-toggleMiniHeader.js:
   production: 2017-10-29T20:10:21-04:00   cd3031533ac6e5d79f1c2058b6d47971
 assets/site.js:
-  production: 2017-10-29T20:10:18-04:00   01aa4ba0bedd86b26d609ae9a28b70a7
+  production: 2017-11-01T15:03:45-04:00   8582882ec61f43de02bfed7fd37c5511
 assets/status_sale.png:
   production: 2017-10-29T06:02:34-04:00   9e9c9791058e006fce2931e1100f3b04
 assets/status_sale_sm.png:
@@ -386,7 +392,7 @@ config/settings_data.json:
 config/settings_schema.json:
   production: 2017-08-13T18:37:56-04:00   4de50d8b26c23ea835a23162e448572d
 layout/theme.liquid:
-  production: 2017-10-31T07:10:30-04:00   c24478b1816422ca9bd7753c83840eb9
+  production: 2017-11-01T15:03:38-04:00   532df49cacdd3335b7e6f1f62adb5c5b
 locales/de.json:
   production: 2017-08-13T18:37:48-04:00   585899bd4424d43afa93b72083a5aa0e
 locales/en.default.json:
@@ -409,7 +415,9 @@ sections/header-custom.liquid:
   production: 2017-10-29T22:15:44-04:00   40d7e2cb76c94fa37d3024b8a62c1ca8
 sections/header-home.liquid:
   development: 2017-10-29T17:40:34-04:00   0d61227290714b9734a829bf00fbea8a
-  production: 2017-10-29T22:15:46-04:00   207bc54ce2e89a93ada6327be024452b
+  production: 2017-11-01T15:03:40-04:00   699eafb88fdd5e786fd74d78c0f0f527
+sections/header-shop.liquid:
+  production: 2017-11-01T15:03:43-04:00   191f90a323edd48f9782c9d78ca04fe1
 sections/header.liquid:
   production: 2017-10-29T22:15:42-04:00   ff601970b3d5f23a3dd526e1c9e00257
 snippets/ajax-cart-template.liquid:
@@ -424,8 +432,10 @@ snippets/collection-sorting.liquid:
   production: 2017-08-13T17:39:48-04:00   d369d2d4697110800946220909e8ecf8
 snippets/comment.liquid:
   production: 2017-08-13T17:39:48-04:00   c766e42be8a74e05533d0e5a0e3a9ce3
+snippets/headernotice.liquid:
+  production: 2017-11-01T15:03:38-04:00   d49cab2fc80eb5553df5aef3a13b05bf
 snippets/mobilenav.liquid:
-  production: 2017-10-31T07:10:32-04:00   dc4489ed8ec2f7e90952034b39b0aea0
+  production: 2017-11-01T15:03:43-04:00   c04e98b0924a47d47d3f97b69d29c33c
 snippets/navigation.liquid:
   production: 2017-10-29T20:10:21-04:00   62ec83c1d2828fefbf02e215e8d1a925
 snippets/oldIE-js.liquid:
@@ -444,6 +454,8 @@ snippets/search-bar.liquid:
   production: 2017-08-13T17:39:49-04:00   733af687725a8174f1348c58f0d5a3e4
 snippets/sectnav-custom.liquid:
   production: 2017-10-31T07:10:33-04:00   6e11f767b82057af6f70109fe213d247
+snippets/sectnav-shop.liquid:
+  production: 2017-11-01T15:03:45-04:00   29adf6770b0ec49939ad8794c2b87604
 snippets/social-meta-tags.liquid:
   production: 2017-08-13T17:39:49-04:00   e7c97d7cb76c7925dd144dfb7b188cac
 snippets/tags-article.liquid:
@@ -457,7 +469,7 @@ templates/blog.liquid:
 templates/cart.liquid:
   production: 2017-08-13T17:39:49-04:00   49bbbe1b3bda19110f7e72abc158bb91
 templates/collection.liquid:
-  production: 2017-08-13T17:39:49-04:00   c4a0532ffb42396661303a7fc87bd12d
+  production: 2017-11-01T15:03:44-04:00   16d9fd21f8b946683a6bed160267b8e5
 templates/customers/account.liquid:
   production: 2017-08-13T17:39:49-04:00   da9e3584ef6699ac5c811b73b42c58db
 templates/customers/activate_account.liquid:
@@ -475,22 +487,22 @@ templates/customers/reset_password.liquid:
 templates/gift_card.liquid:
   production: 2017-08-13T17:39:49-04:00   c1ae0f8232e003fac57213d1353e513c
 templates/index.liquid:
-  production: 2017-10-31T07:10:28-04:00   4649c4550f93ca8d057dbbb6c8e3ecef
+  production: 2017-11-01T15:03:41-04:00   67c5dab2b88da6dff54d3467a77e3beb
 templates/list-collections.liquid:
-  production: 2017-08-13T17:39:49-04:00   380da281c4820602d95334029b03aa84
+  production: 2017-11-01T15:03:44-04:00   1ec5dfbb60be0c36673117a21030d0af
 templates/page.about.liquid:
-  production: 2017-10-31T07:10:27-04:00   2125a67874253fbf44772ff014466c17
+  production: 2017-11-01T15:03:40-04:00   569d0450b1767353b1c23349beb54150
 templates/page.contact.liquid:
   production: 2017-10-31T07:10:32-04:00   ac6c47895432d316a1be5edd3c0f5eda
 templates/page.custom.liquid:
-  production: 2017-10-31T07:10:31-04:00   a7b89484b14b966771f9da4dba23f0df
+  production: 2017-11-01T15:03:42-04:00   9073c3c92ef2a75eb97432544b322daa
 templates/page.faq.liquid:
-  production: 2017-10-31T07:10:27-04:00   5a550b2ef9239b3678a91c388f385dce
+  production: 2017-11-01T15:03:39-04:00   9bf19590944960d3cfa8bc5d98d3e41f
 templates/page.liquid:
   production: 2017-10-31T07:10:31-04:00   813d518c7cdc01755e9988f3213bcef5
 templates/page.lookbook.glint.liquid:
-  production: 2017-10-29T22:15:42-04:00   65f06003a7e5d224163c12df9aa40dc5
+  production: 2017-11-01T15:03:42-04:00   40302e7bc6a03d32f61ee88251a9c826
 templates/product.liquid:
-  production: 2017-08-13T17:39:49-04:00   d28aa955b34f4dfe8819338f15981de2
+  production: 2017-11-01T15:03:39-04:00   aef516cbf5b605b1419ea70490ea4cef
 templates/search.liquid:
   production: 2017-08-13T17:39:49-04:00   3926b96d4d14c2cd8409e56f7cc6d6e0
