@@ -16,4 +16,10 @@
 
 11/1
 - product page
+
+11/2
+- ajax button
+- cart page
+
+11/3
 - related products
