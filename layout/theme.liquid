@@ -57,6 +57,11 @@
     {% section 'header-home' %}
   {% elsif template == 'page.custom' %}
     {% section 'header-custom' %}
+  {% elsif template == 'list-collections' or 
+           template == 'collection' or 
+           template == 'product' or
+           template == 'cart' %}
+    {% section 'header-shop' %}
   {% else %}
     {% section 'header' %}
   {% endif %}

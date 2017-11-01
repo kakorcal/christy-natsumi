@@ -1,0 +1,23 @@
+<header class="cn-header cn-header--notHome dolceVita">
+    <a class="cn-header__title" itemprop="brand" href="/" alt="{{ page_title }}" ></a>
+
+    <ul class="cn-header__nav dolceVita">
+        {% include 'navigation' %}
+    </ul>
+
+    {% include 'sectnav-shop' %}
+</header>
+
+<div class="cn-header--mini">
+    <a class="cn-header__title--mini" href="/" alt="{{ page_title }}" ></a>
+
+    <ul class="cn-header__nav cn-header__nav--mini dolceVita">
+        {% include 'navigation' %}
+    </ul>
+
+    {% include 'sectnav-shop' %}
+</div>
+
+{% include 'mobilenav' %}
+
+{% include 'headernotice' %}

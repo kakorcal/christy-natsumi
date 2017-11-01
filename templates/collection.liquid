@@ -58,14 +58,8 @@
 {% endcomment %}
 
 <script>
-  window.lazySizesConfig = window.lazySizesConfig || {};
-  window.lazySizesConfig.expand = 100;
-
   $(document).on('lazyloaded', function(e){
-    $(e.target).parent().siblings().css({
-      opacity: '1',
-      transition: 'opacity .5s ease'
-    });
+    $(e.target).parent().addClass('show');
   });
 </script>
 
