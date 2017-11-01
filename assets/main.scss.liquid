@@ -3133,6 +3133,16 @@ button, .button {
   &:nth-child(3n) {
     margin-right: 0;
   }
+
+  img {
+    font-size: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+  }
 }
 
 
@@ -3408,6 +3418,16 @@ button, .button {
   opacity: 0;
   transition: opacity .5s ease;
 
+  img {
+    font-size: 0px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+  }
+
   &.show {
     opacity: 1;
   }
@@ -3436,6 +3456,10 @@ button, .button {
 
     @include fx-allFast;
   }
+}
+
+.cn-categoryproduct__soldout {
+  opacity: 0;
 }
 //this is used on the front page - NOT on the products pages. see products-list.scss for those styles
 

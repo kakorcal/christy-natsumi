@@ -2,8 +2,18 @@
 • contact form - use plugin?
 • page.contact.liquid:40 ask greg what this is for
 • page.about.liquid:6 ask greg what this is for
+• how to get various img metadata (use squarespace as an example -> {@|image-meta})
 
-tmw
+10/30
 - fix links on all pages
 - fix click handlers on all pages
 - fix contact form
+
+10/31
+- research how the shop page works on shopify (including related products / wishlist)
+- create the collection/all page
+- categorize the products
+
+11/1
+- product page
+- related products

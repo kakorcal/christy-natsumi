@@ -57,6 +57,11 @@
     {% section 'header-home' %}
   {% elsif template == 'page.custom' %}
     {% section 'header-custom' %}
+  {% elsif template == 'list-collections' or 
+           template == 'collection' or 
+           template == 'product' or
+           template == 'cart' %}
+    {% section 'header-shop' %}
   {% else %}
     {% section 'header' %}
   {% endif %}
@@ -66,6 +71,18 @@
   {% section 'footer' %}
 
   {{ 'fastclick.min.js' | asset_url | script_tag }}
+  {{ 'timber.js' | asset_url | script_tag }}
+
+  {% comment %}
+    Template-specific js
+  {% endcomment %}
+  <script>
+    {% if resetPassword %}
+      $(function() {
+        timber.resetPasswordSuccess();
+      });
+    {% endif %}
+  </script>
 
   {% comment %}
     Ajaxify your cart with this plugin.
@@ -93,7 +110,7 @@
         timber.RightDrawer.open();
       });
     </script>
-  {% endif %}
+  {% endif %} 
   
   {{ 'shoppingcart.js' | asset_url | script_tag }}
   {{ 'site.js' | asset_url | script_tag }}

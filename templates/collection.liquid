@@ -6,95 +6,33 @@
 
 {% endcomment %}
 
-{% paginate collection.products by 12 %}
+<script>
+  // https://github.com/aFarkas/lazysizes
+  window.lazySizesConfig = window.lazySizesConfig || {};
+  window.lazySizesConfig.expand = 150;
 
-{% include 'breadcrumb' %}
+  $(document).on('lazyloaded', function(e){
+    $(e.target).parent().addClass('show');
+  });
+</script>
 
-{% comment %}
-  Use .grid--rev so that the collection tags appear below the products on mobile
-{% endcomment %}
-<div class="grid--rev">
-  <div class="grid__item large--three-quarters">
-
-    {% comment %}
-      Different markup if a collection description exists
-    {% endcomment %}
-    {% if collection.description != blank %}
-      <header class="section-header">
-        <h1 class="section-header__title">{{ collection.title }}</h1>
-        <div class="rte rte--header">
-          {{ collection.description }}
+<main class="cn-wrapper cn-wrapper--top">
+  {% for product in collection.products %}
+    {% if product.images.size > 0 %}
+      <a class="cn-categoryproduct" href="{{ product.url }}">
+        <div class="cn-categoryproduct__img content-fill">
+          <img class="lazyload" data-src="{{ product.featured_image | img_url : '409x273', crop: 'center' }}" alt="{{ product.featured_image.alt }}" />
         </div>
-      </header>
-      <hr>
-      <div class="section-header">
-        <div class="section-header__right">
-          {% include 'collection-sorting' %}
-        </div>
-      </div>
-    {% else %}
-      <header class="section-header">
-        <h1 class="section-header__title section-header__left">{{ collection.title }}</h1>
-        <div class="section-header__right">
-          {% include 'collection-sorting' %}
-        </div>
-      </header>
-    {% endif %}
+        <div class="cn-categoryproduct__title dolceVita">{{ product.title }}</div>
 
-    {% comment %}
-      Use class grid-uniform to have evenly sized columns clear
-      each other properly at each breakpoint.
-    {% endcomment %}
-    <div class="grid-uniform">
-
-      {% comment %}
-        Loop through our products in the current collection.
-        See the snippet 'product-grid-item' for the layout.
-      {% endcomment %}
-      {% for product in collection.products %}
-
-        {% include 'product-grid-item' %}
-
-      {% else %}
-
-        {% if collection.handle == 'all' and current_tags == '' %}
-
-          {% comment %}
-            Add default products to help with onboarding for collections/all only
-          {% endcomment %}
-          {% unless emptyState %}
-            {{ 'theme-onboarding.css' | global_asset_url | stylesheet_tag }}
-            {% assign emptyState = true %}
-          {% endunless %}
-          {% include 'onboarding-empty-collection' %}
-
-        {% else %}
-
-          {% comment %}
-            If collection exists but is empty, display message
-          {% endcomment %}
-          <div class="grid__item">
-            <p>{{ 'collections.general.no_matches' | t }}</p>
-          </div>
-
+        {% if product.available == false %}
+          <div class="cn-categoryproduct__soldout product-mark sold-out">sold out</div>
         {% endif %}
-
-      {% endfor %}
-
-    </div>
-
-    {% if paginate.pages > 1 %}
-      <hr>
-      <div class="pagination">
-        {{ paginate | default_pagination | replace: '&laquo; Previous', '&larr;' | replace: 'Next &raquo;', '&rarr;' }}
-      </div>
+      </a>
+    {% else %}
+      <a class="cn-categoryproduct">no product thumbnail</a>
     {% endif %}
+  {% endfor %}
+</main>
 
-  </div>
-
-  <div class="grid__item large--one-quarter">
-    {% include 'collection-sidebar' %}
-  </div>
-</div>
-
-{% endpaginate %}
+{{ 'lazysizes.min.js' | asset_url | script_tag }}

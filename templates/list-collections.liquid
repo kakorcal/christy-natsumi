@@ -9,33 +9,36 @@
 
 {% endcomment %}
 
-{% include 'breadcrumb' %}
+<script>
+  // https://github.com/aFarkas/lazysizes
+  window.lazySizesConfig = window.lazySizesConfig || {};
+  window.lazySizesConfig.expand = 150;
 
-{% comment %}
-  Loop through each collection, except 'frontpage'
-{% endcomment %}
-{% for collection in collections %}
+  $(document).on('lazyloaded', function(e){
+    $(e.target).parent().addClass('show');
+  });
+</script>
 
-  {% unless collection.handle == 'frontpage' %}
+<main class="cn-wrapper cn-wrapper--top">
+  {% for collection in collections %} 
+    <h3>{{ collection.title }}</h3>
+    {% for product in collection.products %}
+      {% if product.images.size > 0 %}
+        <a class="cn-categoryproduct" href="{{ product.url }}">
+          <div class="cn-categoryproduct__img content-fill">
+            <img class="lazyload" data-src="{{ product.featured_image | img_url : '409x273', crop: 'center' }}" alt="{{ product.featured_image.alt }}" />
+          </div>
+          <div class="cn-categoryproduct__title dolceVita">{{ product.title }}</div>
 
-    {% capture collection_title %}{{ collection.title | escape }}{% endcapture %}
+          {% if product.available == false %}
+            <div class="cn-categoryproduct__soldout product-mark sold-out">sold out</div>
+          {% endif %}
+        </a>
+      {% else %}
+        <a class="cn-categoryproduct">no product thumbnail</a>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</main>
 
-    <div class="section-header">
-      <p class="h1 section-header__left">{{ collection_title }}</p>
-      <div class="section-header__right">
-        <a href="{{ collection.url }}" title="{{ 'collections.general.link_title' | t: title: collection_title }}">More {{ collection_title }} &rsaquo;</a>
-      </div>
-    </div>
-
-    <div class="grid-uniform">
-      {% for product in collection.products limit:5 %}
-        {% assign grid_item_width = 'large--one-fifth medium--one-half' %}
-        {% include 'product-grid-item' %}
-      {% endfor %}
-    </div>
-
-    {% unless forloop.last %}<hr>{% endunless %}
-
-  {% endunless %}
-
-{% endfor %}
+{{ 'lazysizes.min.js' | asset_url | script_tag }}
