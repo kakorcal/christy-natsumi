@@ -7,6 +7,7 @@ var watch = require('gulp-watch');
 var gulpShopify = require('gulp-shopify-upload');
 var merge = require('merge-stream');
 var minify = require('gulp-minify');
+var jsFile = '';
 
 gulp.task('scss-bundle', function() {
   return gulp.src('./lib/styles/scss/main.scss')
@@ -43,11 +44,26 @@ gulp.task('node_modules-copy', function() {
     .pipe(gulp.dest('./assets'));
 });
 
+gulp.task('js-clean', function() {
+  return gulp.src('./assets/' + jsFile, {read: false})
+    .pipe(clean());
+});
+
+gulp.task('js-push', function() {
+  return gulp.src('./lib/scripts/' + jsFile)
+    .pipe(gulp.dest('./assets'));
+});
+
+gulp.task('js', ['js-clean', 'js-push']);
+
 gulp.task('shopify', function() {
-  watch('./lib/styles/scss/**/*.scss', function() {
-    gulp.start('scss');
+  gulp.watch('./lib/styles/scss/**/*.scss', ['scss']);
+
+  gulp.watch('./lib/scripts/**/*.js', function(event) {
+    jsFile = event.path.substr(event.path.lastIndexOf('/') + 1);
+    gulp.start('js');
   });
 
-  watch('./+(assets|layout|config|snippets|sections|templates|locales)/**')
+  return watch('./+(assets|layout|config|snippets|sections|templates|locales)/**')
     .pipe(gulpShopify(process.env.API_KEY, process.env.PASSWORD, process.env.STORE, process.env.DEV_ID));
 });
