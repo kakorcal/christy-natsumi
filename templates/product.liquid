@@ -42,7 +42,11 @@
         {% endif %}
 
         <div class="cn-product__options-wrapper">
-          <div class="cn-product__price cn-number" itemprop="price"><span class="sqs-money-native"><span class="currency">$</span>{{ product.price | money_without_currency }}</span></div>
+          <div class="cn-product__price cn-number">
+            <span id="ProductPrice" class="product-single__price sqs-money-native" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+              {{ current_variant.price | money }}
+            </span>
+          </div>
           
           <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
 
@@ -69,10 +73,12 @@
               </div>
               <input type="number" id="Quantity" name="quantity" value="1" min="1" max="9999" class="quantity-selector">
             </div>
-
-            <button type="submit" name="add" id="AddToCart" class="sqs-add-to-cart-button sqs-suppress-edit-mode sqs-editable-button btn">
-                <span id="AddToCartText" class="sqs-add-to-cart-button-inner">Add to Cart</span>
-            </button>              
+            
+            <div class="sqs-add-to-cart-button-wrapper">
+              <button type="submit" name="add" id="AddToCart" class="sqs-add-to-cart-button sqs-suppress-edit-mode sqs-editable-button btn">
+                  <span id="AddToCartText" class="sqs-add-to-cart-button-inner">Add to Cart</span>
+              </button>              
+            </div>
           </form>
 
           <div class="cn-product__status">
