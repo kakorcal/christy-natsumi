@@ -1899,6 +1899,10 @@ button, .button {
   padding: 9rem 0;
   text-align: center;
 
+  span {
+    display: block;
+  }
+
   a {
     display: block;
     padding-top: 3rem;
@@ -1913,8 +1917,12 @@ button, .button {
   border-bottom: 2px solid #000;
   @include dolceVita;
 
-  td {
+  th {
     font-size: 1.8rem !important;
+  }
+
+  th.item-info {
+    width: 70%;
   }
 }
 
@@ -2161,8 +2169,6 @@ button, .button {
 .sqs-fullpage-shopping-cart-content .checkout-button {
   width: 16% !important;
   min-width: 130px !important;
-
-  @include sqs-add-to-cart-button;
 }
 #confirmed-page {
   display: none;
