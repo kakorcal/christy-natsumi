@@ -99,7 +99,7 @@
 
 
 
-
+.selector-wrapper label,
 .variant-option-title,
 .quantity-label {
   display: inline-block;
@@ -136,11 +136,14 @@
   }
 }
 
-.product-quantity-input input {
-  display: inline-block;
+.product-single__quantity.product-quantity-input {
+  margin-bottom: 1rem; 
+
+  input {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 }
-
-
 
 
 .cn-product__tnContainer {
@@ -252,6 +255,7 @@
 .cn-product__price {
   font-size: 0; //hide the 'from' text
   margin-left: 33%;
+  margin-bottom: 10px; 
 
   @media (min-width: $screen-tablet) and (max-width: $screen-desktop-1) {
     margin-left: -0.75rem;
@@ -267,12 +271,12 @@
     margin-bottom: 1.5rem;
     margin-left: -0.75rem;
 
-    &:before {
+    .currency {
       position: absolute;
       top: 0.3rem;
       left: 0;
       // TODO: this has to be a dollar sign, but shopify scss complier will recognize as token and not string
-      content: '';
+      // content: '';
       font-size: 2rem;
     }
   }
@@ -296,9 +300,11 @@
 
 }
 
+.selector-wrapper label:after {
+  content: ':';
+}
 
-
-
+.selector-wrapper label:before,
 .variant-option-title:after {
   content: '';
   position: absolute;
@@ -351,8 +357,13 @@
   }
 }
 
+.cn-product__options-wrapper #AddToCartForm .ajaxified-cart-feedback {
+  font-size: 1.4rem;
 
-
+  a {
+    border-bottom: none;
+  }
+}
 
 .cn-product__excerpt {
   margin-bottom: 1.5rem;

@@ -55,6 +55,7 @@
 
 
 	//hide thumbnails if only 1 image
+	// @deprecated
 	function checkThumbnailCount() {
 		var arr = document.querySelectorAll('.cn-product__tnContainer__tn');
 
@@ -99,7 +100,7 @@
 
 
 	//addToCartEvent();
-	checkThumbnailCount();
+	// checkThumbnailCount();
 	thumbnailClickEvent();
 	productSelectChangeEvent();
 }());
