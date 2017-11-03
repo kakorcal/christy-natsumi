@@ -13,84 +13,40 @@
       <div class="cart-container">
         <table class="cart-table full table--responsive">
           <thead class="cart__row cart__header-labels">
-            <th>Item</th>
+            <th class="item-remove"><div class="item-label">Item</div></th>
+            <th class="item-img"></th>
             <th class="item-info"></th>
-            <th>Qty</th>
-            <th>Price</th>
+            <th class="item-qty"><div class="item-label">Qty.</div></th>
+            <th class="item-price"><div class="item-label">Price</div></th>
           </thead>
-          <tbody>
+          <tbody class="cart-item-list sqs-table">
             {% for item in cart.items %}
               <tr class="cart__row table__section">
-                <td data-label="{{ 'customer.order.product' | t }}">
-                  <a href="{{ item.url | within: collections.all }}" class="cart__image">
-                    {% comment %}
-                      More image size options at:
-                        - http://docs.shopify.com/themes/filters/product-img-url
-                    {% endcomment %}
-                    <img src="{{ item | img_url: 'medium' }}" alt="{{ item.title | escape }}">
-                  </a>
+                <td class="remove content-group">
+                  <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="cart__remove remove-item">x</a>
+                </td>
+                <td data-label="{{ 'customer.order.product' | t }}" class="item content-group">
+                  <div>
+                    <a href="{{ item.url | within: collections.all }}" class="cart__image">
+                      <img src="{{ item | img_url: '100x' }}" alt="{{ item.title | escape }}">
+                    </a>
+                  </div>
                 </td>
                 <td>
-                  <a href="{{ item.url }}" class="h4">
-                    {{ item.product.title }}
-                  </a>
-                  {% unless item.variant.title contains 'Default' %}
-                    <br>
-                    <small>{{ item.variant.title }}</small>
-                  {% endunless %}
-
-                  {% if settings.cart_vendor_enable %}
-                    <p>{{ item.vendor }}</p>
-                  {% endif %}
-
-                  {% comment %}
-                    Optional, loop through custom product line items if available
-
-                    For more info on line item properties, visit:
-                      - http://docs.shopify.com/support/your-store/products/how-do-I-collect-additional-information-on-the-product-page-Like-for-a-monogram-engraving-or-customization
-                  {% endcomment %}
-                  {% assign property_size = item.properties | size %}
-                  {% if property_size > 0 %}
-                    {% for p in item.properties %}
-                      {% unless p.last == blank %}
-                        {{ p.first }}:
-
-                        {% comment %}
-                          Check if there was an uploaded file associated
-                        {% endcomment %}
-                        {% if p.last contains '/uploads/' %}
-                          <a href="{{ p.last }}">{{ p.last | split: '/' | last }}</a>
-                        {% else %}
-                          {{ p.last }}
-                        {% endif %}
-
-                        <br>
-                      {% endunless %}
-                    {% endfor %}
-                  {% endif %}
-
-                  <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="cart__remove">
-                    <small>{{ 'cart.general.remove' | t }}</small>
-                  </a>
+                  <div class="item-desc">
+                    <div class="item-title">
+                      <a href="{{ item.url | within: collections.all }}">{{ item.product.title }}</a>
+                    </div>
+                    <div class="variant-info">
+                      {{ item.variant.title }}
+                    </div>
+                  </div>
                 </td>
-                <td data-label="{{ 'cart.label.price' | t }}">
-                  <span class="h3">
-                    {{ item.price | money }}
-                  </span>
+                <td data-label="{{ 'cart.label.quantity' | t }}" class="quantity content-group">
+                  <input type="number" name="updates[]" id="updates_{{ item.key }}" data-id="{{ item.key }}" size="1" value="{{ item.quantity }}" min="0">
                 </td>
-                <td data-label="{{ 'cart.label.quantity' | t }}">
-                  <input type="number" name="updates[]" id="updates_{{ item.key }}" data-id="{{ item.key }}" value="{{ item.quantity }}" min="0">
-                </td>
-                <td data-label="{{ 'cart.label.total' | t }}" class="text-right">
-                  {% if item.original_line_price != item.line_price %}
-                    <span class="cart-item__original-price"><s>{{ item.original_line_price | money }}</s></span>
-                  {% endif %}
-                  <span class="h3">
-                    {{ item.line_price | money }}
-                  </span>
-                  {% for discount in item.discounts %}
-                    <span class="cart-item__discount">{{ discount.title }}</span>
-                  {% endfor %}
+                <td data-label="{{ 'cart.label.price' | t }}" class="price content-group">
+                  {{ item.price | money }}
                 </td>
               </tr>
             {% endfor %}
