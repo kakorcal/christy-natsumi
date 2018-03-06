@@ -1,9 +1,9 @@
-• products-item.scss:264 this has to be a dollar sign, but shopify scss complier will recognize as token and not string
 • contact form - use plugin?
 • page.contact.liquid:40 ask greg what this is for
 • page.about.liquid:6 ask greg what this is for
 • how to get various img metadata (use squarespace as an example -> {@|image-meta})
-• ajax side drawer? proceed to checkout 
+• ajax side drawer? proceed to checkout
+•  
 
 10/30
 - fix links on all pages
@@ -23,4 +23,5 @@
 - cart page
 
 11/3
+- cart page
 - related products
