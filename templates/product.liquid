@@ -29,33 +29,27 @@
       <!--RIGHT COLUMN-->
       <div class="cn-product__details">
         <h4 class="cn-product__title--web dolceVita" itemprop="name">{{ product.title }}</h4>
-
-        <div class="cn-product__tnContainer">
-          {% for image in product.images %}
-            <div class="cn-product__tnContainer__tn content-fill" data-index="{{ image.position }}">
-              <img src="{{ image | img_url : 'compact' }}" alt="{{ image.alt }}" />
-            </div>
-          {% endfor %}
-        </div>
+        
+        {% if product.images.size > 1 %}
+          <div class="cn-product__tnContainer">
+            {{ product.images.size }}
+            {% for image in product.images %}
+              <div class="cn-product__tnContainer__tn content-fill" data-index="{{ image.position }}">
+                <img src="{{ image | img_url : 'compact' }}" alt="{{ image.alt }}" />
+              </div>
+            {% endfor %}
+          </div>
+        {% endif %}
 
         <div class="cn-product__options-wrapper">
-          <div class="cn-product__price cn-number" itemprop="price">{{ product.price | money }}</div>
+          <div class="cn-product__price cn-number">
+            <span id="ProductPrice" class="product-single__price sqs-money-native" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+              {{ current_variant.price | money }}
+            </span>
+          </div>
+          
+          <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm">
 
-          <form action="/cart/add" method="post" enctype="multipart/form-data" id="AddToCartForm" class="form-vertical">
-
-            {% comment %}
-              Add product variants as a dropdown.
-                - By default, each variant (or combination of variants) will display as its own <option>
-                - To separate these into multiple steps, which we suggest, use option_selection.js (see below)
-
-              You can leverage jQuery to add a callback on page load and each time the select element changes:
-                - Include option_selection.js (as seen at the bottom of this file)
-                - This allows you to use JavaScript anytime the variant dropdown changes
-                - This also separates out your variant options (ie. size, color, etc.) to separate select elements
-
-              For more information on products with multiple options, visit:
-                - http://docs.shopify.com/support/your-website/themes/can-i-make-my-theme-use-products-with-multiple-options#update-product-liquid
-            {% endcomment %}
             <select name="id" id="productSelect" class="product-single__variants">
               {% for variant in product.variants %}
                 {% if variant.available %}
@@ -73,24 +67,18 @@
               {% endfor %}
             </select>
 
-            <span class="visually-hidden">{{ 'products.general.regular_price' | t }}</span>
-            <span id="ProductPrice" class="h2" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
-              {{ current_variant.price | money }}
-            </span>
-
-            {% if product.compare_at_price_max > product.price %}
-              <span class="visually-hidden">{{ 'products.general.sale_price' | t }}</span>
-              <p id="ComparePrice">
-                {{ 'products.product.compare_at' | t }} {{ current_variant.compare_at_price | money }}
-              </p>
-            {% endif %}
-
-            <label for="Quantity" class="quantity-selector">{{ 'products.product.quantity' | t }}</label>
-            <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
-
-            <button type="submit" name="add" id="AddToCart" class="btn">
-              <span id="AddToCartText">{{ 'products.product.add_to_cart' | t }}</span>
-            </button>
+            <div class="product-single__quantity product-quantity-input">
+              <div class="quantity-label">
+                <label for="Quantity">Quantity:</label>
+              </div>
+              <input type="number" id="Quantity" name="quantity" value="1" min="1" max="9999" class="quantity-selector">
+            </div>
+            
+            <div class="sqs-add-to-cart-button-wrapper">
+              <button type="submit" name="add" id="AddToCart" class="sqs-add-to-cart-button sqs-suppress-edit-mode sqs-editable-button btn">
+                  <span id="AddToCartText" class="sqs-add-to-cart-button-inner">Add to Cart</span>
+              </button>              
+            </div>
           </form>
 
           <div class="cn-product__status">
@@ -124,13 +112,19 @@
       addons can override it.
       * E.g. multiple currencies http://docs.shopify.com/manual/configuration/store-customization/currencies-and-translations/currencies/how-to-toggle-between-two-currencies
 {% endcomment %}
+
 {{ 'option_selection.js' | shopify_asset_url | script_tag }}
 <script>
   var selectCallback = function(variant, selector) {
     timber.productPage({
       money_format: "{{ shop.money_format }}",
       variant: variant,
-      selector: selector
+      selector: selector,
+      translations: {
+        add_to_cart : "Add to Cart",
+        sold_out : "Sold Out",
+        unavailable : "Unavailable"
+      }
     });
   };
 

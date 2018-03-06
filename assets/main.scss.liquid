@@ -1887,17 +1887,15 @@ button, .button {
   max-width: 100%;
   margin-top: 3rem;
 }
-//hide 'shopping cart' title
-.sqs-fullpage-shopping-cart-content h2 {
-  display: none;
-}
-
-
 //style cart empty messaging
 .sqs-fullpage-shopping-cart-content.empty .empty-message {
   font-size: 1.8rem;
   padding: 9rem 0;
   text-align: center;
+
+  span {
+    display: block;
+  }
 
   a {
     display: block;
@@ -1910,11 +1908,40 @@ button, .button {
 
 //spacing and sizing for the whole table
 .sqs-fullpage-shopping-cart-content .cart-container table thead {
-  border-bottom: 2px solid #000;
+  border-bottom: 1px solid #ccc;
   @include dolceVita;
 
-  td {
+  th {
     font-size: 1.8rem !important;
+    padding-bottom: 10px;
+    vertical-align: middle;
+  }
+
+  th.item-remove {
+    text-align: left;
+    min-width: 3.5vw;
+    width: 47px;
+  }
+
+  th.item-info {
+    width: 70%;
+  }
+
+  th.item-qty {
+    min-width: 4em;
+  }
+
+  th.item-price {
+    text-align: right;
+    min-width: 20vw;
+  }
+
+  th .item-label {
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: .05em;
+    opacity: .6;
+    font-weight: 400;
   }
 }
 
@@ -1974,16 +2001,15 @@ button, .button {
   }
 }
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr .item img {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  width: auto !important;
-  max-width: 160%;
-  max-height: 100%;
-  display: none;
-}
+// .sqs-fullpage-shopping-cart-content .cart-container table tr .item img {
+//   position: absolute;
+//   left: 50%;
+//   top: 50%;
+//   transform: translateX(-50%) translateY(-50%);
+//   width: auto !important;
+//   max-width: 160%;
+//   max-height: 100%;
+// }
 
 
 //container that holds title and description.
@@ -2052,12 +2078,14 @@ button, .button {
   }
 }
 
+.sqs-fullpage-shopping-cart-content .cart-container table tr .quantity {
+  text-align: center;
+}
 
 .sqs-fullpage-shopping-cart-content .cart-container table tr .quantity input {
   float: none;
   margin: 0;
   border: 1px solid $border-color;
-  text-align: left;
   width: 4rem;
 
   @media (min-width: $screen-desktop) {
@@ -2068,18 +2096,25 @@ button, .button {
 .sqs-fullpage-shopping-cart-content .cart-container table tr .price {
   padding-left: 0;
   font-size: 1.4rem;
+  text-align: right;
+}
+
+.sqs-fullpage-shopping-cart-content .cart-container table tr .remove {
+  min-width: 3.5vw;
 }
 
 .sqs-fullpage-shopping-cart-content .cart-container table tr .remove .remove-item {
-  float: none;
-  font-size: 2.8rem;
-  margin-right: 0;
-  margin-bottom: 0.6rem; //to vertically align with other text
-  font-weight: normal;
-  line-height: 3.2rem;
-  text-align: right;
-  color: #000;
+  @include dolceVita;
+
+  margin-right: 1em;
   opacity: 0.4;
+  font-size: 20px;
+  font-weight: 100;
+  cursor: pointer;
+  text-decoration: none;
+  transform :scale(3,1); 
+  -webkit-transform :scale(3,1);
+  color: #444;
 }
 
 .sqs-fullpage-shopping-cart-content .cart-container table tr .remove .remove-item:hover {
@@ -2161,8 +2196,6 @@ button, .button {
 .sqs-fullpage-shopping-cart-content .checkout-button {
   width: 16% !important;
   min-width: 130px !important;
-
-  @include sqs-add-to-cart-button;
 }
 #confirmed-page {
   display: none;
@@ -3060,7 +3093,7 @@ button, .button {
 
 
 
-
+.selector-wrapper label,
 .variant-option-title,
 .quantity-label {
   display: inline-block;
@@ -3097,11 +3130,14 @@ button, .button {
   }
 }
 
-.product-quantity-input input {
-  display: inline-block;
+.product-single__quantity.product-quantity-input {
+  margin-bottom: 1rem; 
+
+  input {
+    display: inline-block;
+    margin-bottom: 0;
+  }
 }
-
-
 
 
 .cn-product__tnContainer {
@@ -3213,6 +3249,8 @@ button, .button {
 .cn-product__price {
   font-size: 0; //hide the 'from' text
   margin-left: 33%;
+  margin-bottom: 10px; 
+  
 
   @media (min-width: $screen-tablet) and (max-width: $screen-desktop-1) {
     margin-left: -0.75rem;
@@ -3228,12 +3266,12 @@ button, .button {
     margin-bottom: 1.5rem;
     margin-left: -0.75rem;
 
-    &:before {
+    .currency {
       position: absolute;
       top: 0.3rem;
       left: 0;
       // TODO: this has to be a dollar sign, but shopify scss complier will recognize as token and not string
-      content: '';
+      // content: '';
       font-size: 2rem;
     }
   }
@@ -3257,9 +3295,11 @@ button, .button {
 
 }
 
+.selector-wrapper label:after {
+  content: ':';
+}
 
-
-
+.selector-wrapper label:before,
 .variant-option-title:after {
   content: '';
   position: absolute;
@@ -3282,8 +3322,9 @@ button, .button {
 
 //add to cart button styles
 .sqs-add-to-cart-button-wrapper {
-  margin-left: 34%;
-  margin-top: 1.5rem;
+  // margin-left: 34%;
+  // margin-top: 1.5rem;
+  margin: 20px 0;
 
   @media (min-width: $screen-tablet) and (max-width: $screen-desktop-1) {
     margin-left: 0;
@@ -3312,8 +3353,13 @@ button, .button {
   }
 }
 
+.cn-product__options-wrapper #AddToCartForm .ajaxified-cart-feedback {
+  font-size: 1.4rem;
 
-
+  a {
+    border-bottom: none;
+  }
+}
 
 .cn-product__excerpt {
   margin-bottom: 1.5rem;
