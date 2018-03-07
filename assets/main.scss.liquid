@@ -1888,7 +1888,7 @@ button, .button {
   margin-top: 3rem;
 }
 //style cart empty messaging
-.sqs-fullpage-shopping-cart-content.empty .empty-message {
+.fullpage-shopping-cart-content.empty .empty-message {
   font-size: 1.8rem;
   padding: 9rem 0;
   text-align: center;
@@ -1907,8 +1907,8 @@ button, .button {
 
 
 //spacing and sizing for the whole table
-.sqs-fullpage-shopping-cart-content .cart-container table thead {
-  border-bottom: 1px solid #ccc;
+.fullpage-shopping-cart-content .cart-container table thead {
+  border-bottom: 1px solid hsla(0,0%,39%,.1);
   @include dolceVita;
 
   th {
@@ -1946,7 +1946,7 @@ button, .button {
 }
 
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr {
+.fullpage-shopping-cart-content .cart-container table tr {
   padding: 0;
 
   td:nth-child(1) { width: $cart-mobile-col-img !important; }
@@ -1965,7 +1965,7 @@ button, .button {
 }
 
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr td {
+.fullpage-shopping-cart-content .cart-container table tr td {
   padding: 1rem 0 1.5rem 0;
   border-bottom: 1px solid #ccc;
   text-align: left !important;
@@ -1977,18 +1977,18 @@ button, .button {
   }
 }
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr:last-child td {
+.fullpage-shopping-cart-content .cart-container table tr:last-child td {
   border-bottom: 2px solid #000;
 }
 
 
 
 //item image styles
-.sqs-fullpage-shopping-cart-content .cart-container table tr .item {
+.fullpage-shopping-cart-content .cart-container table tr .item {
   text-align: center;
 }
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr .item .item-image {
+.fullpage-shopping-cart-content .cart-container table tr .item .item-image {
   position: relative;
   display: inline-block;
   width: 100%;
@@ -2001,7 +2001,7 @@ button, .button {
   }
 }
 
-// .sqs-fullpage-shopping-cart-content .cart-container table tr .item img {
+// .fullpage-shopping-cart-content .cart-container table tr .item img {
 //   position: absolute;
 //   left: 50%;
 //   top: 50%;
@@ -2013,8 +2013,8 @@ button, .button {
 
 
 //container that holds title and description.
-.sqs-fullpage-shopping-cart-content .cart-container table tr .item-desc,
-.sqs-fullpage-shopping-cart-content .cart-container thead td:nth-child(2) {
+.fullpage-shopping-cart-content .cart-container table tr .item-desc,
+.fullpage-shopping-cart-content .cart-container thead td:nth-child(2) {
   padding-left: 0;
   display: none; //hide on mobile, we will put the title on a new row
 
@@ -2025,13 +2025,13 @@ button, .button {
 
 
 //item title
-.sqs-fullpage-shopping-cart-content .cart-container table tr .item-desc a {
+.fullpage-shopping-cart-content .cart-container table tr .item-desc a {
   font-size: 1.6rem;
   line-height: 1.6rem;
 }
 
 //mobile title - we use js to duplicate the td. see shoppingcart.js
-.sqs-fullpage-shopping-cart-content .cart-container tbody tr.mobileTitle {
+.fullpage-shopping-cart-content .cart-container tbody tr.mobileTitle {
   @media (min-width: $screen-tablet) {
     display: none;
   }
@@ -2049,7 +2049,7 @@ button, .button {
 
 
 //item desc text
-.sqs-fullpage-shopping-cart-content .variant-info {
+.fullpage-shopping-cart-content .variant-info {
   margin-top: 0.75rem !important;
   font-size: 1.4rem !important;
   color: #666 !important;
@@ -2057,7 +2057,7 @@ button, .button {
 
 
 //quantity tag changes to 'qty' for mobile and tablet
-.sqs-fullpage-shopping-cart-content .cart-container thead tr .quantity {
+.fullpage-shopping-cart-content .cart-container thead tr .quantity {
   font-size: 0 !important;
   position: relative;
 
@@ -2078,11 +2078,11 @@ button, .button {
   }
 }
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr .quantity {
+.fullpage-shopping-cart-content .cart-container table tr .quantity {
   text-align: center;
 }
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr .quantity input {
+.fullpage-shopping-cart-content .cart-container table tr .quantity input {
   float: none;
   margin: 0;
   border: 1px solid $border-color;
@@ -2093,17 +2093,17 @@ button, .button {
   }
 }
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr .price {
+.fullpage-shopping-cart-content .cart-container table tr .price {
   padding-left: 0;
   font-size: 1.4rem;
   text-align: right;
 }
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr .remove {
+.fullpage-shopping-cart-content .cart-container table tr .remove {
   min-width: 3.5vw;
 }
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr .remove .remove-item {
+.fullpage-shopping-cart-content .cart-container table tr .remove .remove-item {
   @include dolceVita;
 
   margin-right: 1em;
@@ -2117,13 +2117,13 @@ button, .button {
   color: #444;
 }
 
-.sqs-fullpage-shopping-cart-content .cart-container table tr .remove .remove-item:hover {
+.fullpage-shopping-cart-content .cart-container table tr .remove .remove-item:hover {
   opacity: 1;
 }
 
 
 
-.sqs-fullpage-shopping-cart-content .cart-container .subtotal {
+.fullpage-shopping-cart-content .cart-container .subtotal {
   border-bottom: none;
   float: none;
   width: 100%;
@@ -2141,7 +2141,7 @@ button, .button {
 
 
 //'subtotal' label
-.sqs-fullpage-shopping-cart-content .cart-container .subtotal .label {
+.fullpage-shopping-cart-content .cart-container .subtotal .label {
   font-size: 1.8rem;
   font-weight: bold;
   margin-right: 0;
@@ -2170,7 +2170,7 @@ button, .button {
   }
 }
 
-.sqs-fullpage-shopping-cart-content .cart-container .subtotal .price {
+.fullpage-shopping-cart-content .cart-container .subtotal .price {
   font-size: 1.4rem;
   display: inline-block;
   text-align: left;
@@ -2182,7 +2182,7 @@ button, .button {
   }
 }
 
-.sqs-fullpage-shopping-cart-content .checkout {
+.fullpage-shopping-cart-content .checkout {
   float: none;
   padding-right: 0;
 
@@ -2193,7 +2193,7 @@ button, .button {
   }
 }
 
-.sqs-fullpage-shopping-cart-content .checkout-button {
+.fullpage-shopping-cart-content .checkout-button {
   width: 16% !important;
   min-width: 130px !important;
 }

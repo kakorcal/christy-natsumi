@@ -9,7 +9,7 @@
 
 <main class="cn-wrapper cn-wrapper--top">
   {% if cart.item_count > 0 %}
-    <form action="/cart" method="post" novalidate class="cart table-wrap sqs-fullpage-shopping-cart-content">
+    <form action="/cart" method="post" novalidate class="cart table-wrap fullpage-shopping-cart-content">
       <div class="cart-container">
         <table class="cart-table full table--responsive">
           <thead class="cart__row cart__header-labels">
@@ -19,7 +19,7 @@
             <th class="item-qty"><div class="item-label">Qty.</div></th>
             <th class="item-price"><div class="item-label">Price</div></th>
           </thead>
-          <tbody class="cart-item-list sqs-table">
+          <tbody class="cart-item-list table">
             {% for item in cart.items %}
               <tr class="cart__row table__section">
                 <td class="remove content-group">
@@ -66,7 +66,7 @@
             {% endif %}
             <div class="checkout">
               <button type="submit" name="update" class="btn--secondary update-cart">{{ 'cart.general.update' | t }}</button>
-              <button type="submit" name="checkout" class="sqs-add-to-cart-button sqs-suppress-edit-mode sqs-editable-button checkout-button btn">Checkout</button>
+              <button type="submit" name="checkout" class="add-to-cart-button suppress-edit-mode editable-button checkout-button btn">Checkout</button>
             </div>
           </div>
         </div>
@@ -76,7 +76,7 @@
     {% comment %}
       The cart is empty
     {% endcomment %}
-    <div class="sqs-fullpage-shopping-cart-content empty">
+    <div class="fullpage-shopping-cart-content empty">
       <div class="empty-message">
         <span>You have nothing in your shopping cart.</span>
         <a href="/">Continue Shopping</a>
