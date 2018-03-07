@@ -21,54 +21,50 @@
             <div class="item-qty"><span class="item-label"><span>QTY.</span></span></div>
             <div class="item-price"><div class="item-label"><span>PRICE</span></div></div>
           </div>
-          <div class="cart-item-list table">
-            {% for item in cart.items %}              
-              <div class="remove content-group">
-                <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="cart__remove remove-item">x</a>
+          {% for item in cart.items %}              
+            <div class="cart-item-list">
+              <div class="item-remove">
+                <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" title="Remove Item">×</a>
               </div>
-              <div data-label="{{ 'customer.order.product' | t }}" class="item content-group">
-                <div>
+              <div data-label="{{ 'customer.order.product' | t }}" class="item-img">
+                <div class="item-img-bg" style="background-image: url({{ item | img_url: '100x' }});">
+                  <!-- 
                   <a href="{{ item.url | within: collections.all }}" class="cart__image">
                     <img src="{{ item | img_url: '100x' }}" alt="{{ item.title | escape }}">
                   </a>
+                   -->
                 </div>
               </div>
-              <div>
-                <div class="item-desc">
-                  <div class="item-title">
-                    <a href="{{ item.url | within: collections.all }}">{{ item.product.title }}</a>
-                  </div>
-                  <div class="variant-info">
-                    {{ item.variant.title }}
-                  </div>
+              <div class="item-desc">
+                <div class="item-title">
+                  <a href="{{ item.url | within: collections.all }}">{{ item.product.title }}</a>
+                </div>
+                <div class="variant-info">
+                  {{ item.variant.title }}
                 </div>
               </div>
-              <div data-label="{{ 'cart.label.quantity' | t }}" class="quantity content-group">
-                <input type="number" name="updates[]" id="updates_{{ item.key }}" data-id="{{ item.key }}" size="1" value="{{ item.quantity }}" min="0">
+              <div data-label="{{ 'cart.label.quantity' | t }}" class="item-quantity">
+                <input type="number" name="updates[]" id="updates_{{ item.key }}" data-id="{{ item.key }}" value="{{ item.quantity }}" min="1" max="{{ item.variant.inventory_quantity }}">
               </div>
-              <div data-label="{{ 'cart.label.price' | t }}" class="price content-group">
+              <div data-label="{{ 'cart.label.price' | t }}" class="item-price">
                 {{ item.price | money }}
               </div>
-            {% endfor %}
-          </div>
+            </div>
+          {% endfor %}
         </div>
-        <div class="grid cart__row">
-          <div class="grid__item text-right{% if settings.cart_notes_enable %} one-third small--one-whole{% endif %}">
-            <div class="subtotal">
-              <span class="label">{{ 'cart.general.subtotal' | t }}</span>
-              <span class="price">{{ cart.total_price | money }}</span>
-            </div>
-            {% if cart.total_discounts > 0 %}
-              {% assign savings = cart.total_discounts | money %}
-              <p>
-                <span class="cart-subtotal__savings"><em>{{ 'cart.general.savings_html' | t: price: savings }}</em></span>
-              </p>
-            {% endif %}
-            <div class="checkout">
-              <button type="submit" name="update" class="btn--secondary update-cart">{{ 'cart.general.update' | t }}</button>
-              <button type="submit" name="checkout" class="add-to-cart-button suppress-edit-mode editable-button checkout-button btn">Checkout</button>
-            </div>
-          </div>
+        <div class="cart-subtotal">
+          <span class="subtotal-label">{{ 'cart.general.subtotal' | t }}</span>
+          <span class="subtotal-price">{{ cart.total_price | money }}</span>
+          {% if cart.total_discounts > 0 %}
+            {% assign savings = cart.total_discounts | money %}
+            <p>
+              <span class="cart-subtotal__savings"><em>{{ 'cart.general.savings_html' | t: price: savings }}</em></span>
+            </p>
+          {% endif %}
+        </div>
+        <div class="cart-checkout">
+          <button type="submit" name="update" class="sqs-editable-button button">{{ 'cart.general.update' | t }}</button>
+          <button type="submit" name="checkout" class="sqs-editable-button button">Checkout</button>
         </div>
       </div>
     </form>
