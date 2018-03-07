@@ -7,10 +7,12 @@
 
 {% endcomment %}
 
-<main class="cn-wrapper cn-wrapper--top">
+<main>
+<div class="cn-wrapper cn-wrapper--top">
   {% if cart.item_count > 0 %}
     <form action="/cart" method="post" novalidate class="cart table-wrap fullpage-shopping-cart-content">
       <div class="cart-container">
+        <h2 class="cart-title">SHOPPING CART</h2>
         <table class="cart-table full table--responsive">
           <thead class="cart__row cart__header-labels">
             <th class="item-remove"><div class="item-label">Item</div></th>
@@ -83,4 +85,5 @@
       </div>
     </div>
   {% endif %}
+</div>
 </main>
