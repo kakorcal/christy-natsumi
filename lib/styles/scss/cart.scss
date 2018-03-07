@@ -28,42 +28,71 @@
   margin-bottom: 30px;
 }
 
+.fullpage-shopping-cart-content .cart-container .cart-table {
+  display: table;
+  width: 100%;
+}
+
 //spacing and sizing for the whole table
-.fullpage-shopping-cart-content .cart-container table thead {
+.fullpage-shopping-cart-content .cart-container .cart-table .cart__header-labels {
+  padding-bottom: 10px;
   border-bottom: 1px solid hsla(0,0%,39%,.1);
-  @include dolceVita;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: inherit;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  border-bottom: 1px solid hsla(0,0%,39%,.1);
 
-  th {
-    font-size: 1.8rem !important;
-    padding-bottom: 10px;
+  .item-label, .item-qty .item-label, .item-price .item-label {
+    display: inline-block;
     vertical-align: middle;
-  }
-
-  th.item-remove {
-    text-align: left;
-    min-width: 3.5vw;
-    width: 47px;
-  }
-
-  th.item-info {
-    width: 70%;
-  }
-
-  th.item-qty {
-    min-width: 4em;
-  }
-
-  th.item-price {
-    text-align: right;
-    min-width: 20vw;
-  }
-
-  th .item-label {
     text-transform: uppercase;
-    font-size: 13px;
+    font-size: 11px;
     letter-spacing: .05em;
     opacity: .6;
-    font-weight: 400;
+  }
+
+  .item-img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 100px;
+    position: relative;
+    margin-right: 30px;
+  }
+
+  .item-desc {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 14px;
+    line-height: 1.5em;
+    -webkit-flex-grow: 8;
+    -ms-flex-positive: 8;
+    flex-grow: 8;
+    margin-right: 30px;
+  }
+
+  .item-qty {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: nowrap;
+    min-width: 4em;
+    text-align: center;
+    font-size: 16px;
+  }
+
+  .item-price {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    white-space: nowrap;
+    text-align: right;
+    min-width: 20vw;
   }
 }
 

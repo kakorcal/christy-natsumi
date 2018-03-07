@@ -13,47 +13,45 @@
     <form action="/cart" method="post" novalidate class="cart table-wrap fullpage-shopping-cart-content">
       <div class="cart-container">
         <h2 class="cart-title">SHOPPING CART</h2>
-        <table class="cart-table full table--responsive">
-          <thead class="cart__row cart__header-labels">
-            <th class="item-remove"><div class="item-label">Item</div></th>
-            <th class="item-img"></th>
-            <th class="item-info"></th>
-            <th class="item-qty"><div class="item-label">Qty.</div></th>
-            <th class="item-price"><div class="item-label">Price</div></th>
-          </thead>
-          <tbody class="cart-item-list table">
-            {% for item in cart.items %}
-              <tr class="cart__row table__section">
-                <td class="remove content-group">
-                  <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="cart__remove remove-item">x</a>
-                </td>
-                <td data-label="{{ 'customer.order.product' | t }}" class="item content-group">
-                  <div>
-                    <a href="{{ item.url | within: collections.all }}" class="cart__image">
-                      <img src="{{ item | img_url: '100x' }}" alt="{{ item.title | escape }}">
-                    </a>
+        <div class="cart-table full table--responsive">
+          <div class="cart__row cart__header-labels">
+            <span class="item-label"><span>ITEM</span></span>
+            <div class="item-img"></div>
+            <div class="item-desc"></div>
+            <div class="item-qty"><span class="item-label"><span>QTY.</span></span></div>
+            <div class="item-price"><div class="item-label"><span>PRICE</span></div></div>
+          </div>
+          <div class="cart-item-list table">
+            {% for item in cart.items %}              
+              <div class="remove content-group">
+                <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="cart__remove remove-item">x</a>
+              </div>
+              <div data-label="{{ 'customer.order.product' | t }}" class="item content-group">
+                <div>
+                  <a href="{{ item.url | within: collections.all }}" class="cart__image">
+                    <img src="{{ item | img_url: '100x' }}" alt="{{ item.title | escape }}">
+                  </a>
+                </div>
+              </div>
+              <div>
+                <div class="item-desc">
+                  <div class="item-title">
+                    <a href="{{ item.url | within: collections.all }}">{{ item.product.title }}</a>
                   </div>
-                </td>
-                <td>
-                  <div class="item-desc">
-                    <div class="item-title">
-                      <a href="{{ item.url | within: collections.all }}">{{ item.product.title }}</a>
-                    </div>
-                    <div class="variant-info">
-                      {{ item.variant.title }}
-                    </div>
+                  <div class="variant-info">
+                    {{ item.variant.title }}
                   </div>
-                </td>
-                <td data-label="{{ 'cart.label.quantity' | t }}" class="quantity content-group">
-                  <input type="number" name="updates[]" id="updates_{{ item.key }}" data-id="{{ item.key }}" size="1" value="{{ item.quantity }}" min="0">
-                </td>
-                <td data-label="{{ 'cart.label.price' | t }}" class="price content-group">
-                  {{ item.price | money }}
-                </td>
-              </tr>
+                </div>
+              </div>
+              <div data-label="{{ 'cart.label.quantity' | t }}" class="quantity content-group">
+                <input type="number" name="updates[]" id="updates_{{ item.key }}" data-id="{{ item.key }}" size="1" value="{{ item.quantity }}" min="0">
+              </div>
+              <div data-label="{{ 'cart.label.price' | t }}" class="price content-group">
+                {{ item.price | money }}
+              </div>
             {% endfor %}
-          </tbody>
-        </table>
+          </div>
+        </div>
         <div class="grid cart__row">
           <div class="grid__item text-right{% if settings.cart_notes_enable %} one-third small--one-whole{% endif %}">
             <div class="subtotal">
