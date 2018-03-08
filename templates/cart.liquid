@@ -10,24 +10,24 @@
 <main>
 <div class="cn-wrapper cn-wrapper--top">
   {% if cart.item_count > 0 %}
-    <form action="/cart" method="post" novalidate class="cart table-wrap fullpage-shopping-cart-content">
-      <div class="cart-container">
-        <h2 class="cart-title">SHOPPING CART</h2>
-        <div class="cart-table full table--responsive">
-          <div class="cart__row cart__header-labels">
-            <span class="item-label"><span>ITEM</span></span>
-            <div class="item-img"></div>
-            <div class="item-desc"></div>
-            <div class="item-qty"><span class="item-label"><span>QTY.</span></span></div>
-            <div class="item-price"><div class="item-label"><span>PRICE</span></div></div>
+    <form action="/cart" method="post" novalidate class="cart">
+      <div class="cart__container">
+        <h2 class="cart__title">SHOPPING CART</h2>
+        <div class="cart__table">
+          <div class="cart__header-labels">
+            <span class="cart__header-item"><span>ITEM</span></span>
+            <div class="cart__header-img"></div>
+            <div class="cart__header-desc"></div>
+            <div class="cart__header-qty"><div><span>QTY.</span></div></div>
+            <div class="cart__header-price"><div><span>PRICE</span></div></div>
           </div>
           {% for item in cart.items %}              
-            <div class="cart-item-list">
-              <div class="item-remove">
+            <div class="cart__item">
+              <div class="cart__item-remove">
                 <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" title="Remove Item">×</a>
               </div>
-              <div data-label="{{ 'customer.order.product' | t }}" class="item-img">
-                <div class="item-img-bg" style="background-image: url({{ item | img_url: '100x' }});">
+              <div data-label="{{ 'customer.order.product' | t }}" class="cart__item-img">
+                <div style="background-image: url({{ item | img_url: '100x' }});">
                   <!-- 
                   <a href="{{ item.url | within: collections.all }}" class="cart__image">
                     <img src="{{ item | img_url: '100x' }}" alt="{{ item.title | escape }}">
@@ -35,34 +35,34 @@
                    -->
                 </div>
               </div>
-              <div class="item-desc">
-                <div class="item-title">
+              <div class="cart__item-desc">
+                <div class="cart__item-title">
                   <a href="{{ item.url | within: collections.all }}">{{ item.product.title }}</a>
                 </div>
-                <div class="variant-info">
+                <div class="cart__variant-info">
                   {{ item.variant.title }}
                 </div>
               </div>
-              <div data-label="{{ 'cart.label.quantity' | t }}" class="item-quantity">
+              <div data-label="{{ 'cart.label.quantity' | t }}" class="cart__item-qty">
                 <input type="number" name="updates[]" id="updates_{{ item.key }}" data-id="{{ item.key }}" value="{{ item.quantity }}" min="1" max="{{ item.variant.inventory_quantity }}">
               </div>
-              <div data-label="{{ 'cart.label.price' | t }}" class="item-price">
+              <div data-label="{{ 'cart.label.price' | t }}" class="cart__item-price">
                 {{ item.price | money }}
               </div>
             </div>
           {% endfor %}
         </div>
-        <div class="cart-subtotal">
-          <span class="subtotal-label">{{ 'cart.general.subtotal' | t }}</span>
-          <span class="subtotal-price">{{ cart.total_price | money }}</span>
+        <div class="cart__subtotal">
+          <span class="cart__subtotal-label">{{ 'cart.general.subtotal' | t }}</span>
+          <span class="cart__subtotal-price">{{ cart.total_price | money }}</span>
           {% if cart.total_discounts > 0 %}
             {% assign savings = cart.total_discounts | money %}
             <p>
-              <span class="cart-subtotal__savings"><em>{{ 'cart.general.savings_html' | t: price: savings }}</em></span>
+              <span class="cart__subtotal-savings"><em>{{ 'cart.general.savings_html' | t: price: savings }}</em></span>
             </p>
           {% endif %}
         </div>
-        <div class="cart-checkout">
+        <div class="cart__checkout">
           <button type="submit" name="update" class="sqs-editable-button button">{{ 'cart.general.update' | t }}</button>
           <button type="submit" name="checkout" class="sqs-editable-button button">Checkout</button>
         </div>
@@ -72,8 +72,8 @@
     {% comment %}
       The cart is empty
     {% endcomment %}
-    <div class="fullpage-shopping-cart-content empty">
-      <div class="empty-message">
+    <div class="cart__empty">
+      <div>
         <span>You have nothing in your shopping cart.</span>
         <a href="/">Continue Shopping</a>
       </div>
