@@ -55,12 +55,14 @@
         <div class="cart__subtotal">
           <span class="cart__subtotal-label">{{ 'cart.general.subtotal' | t }}</span>
           <span class="cart__subtotal-price">{{ cart.total_price | money }}</span>
+          <!-- 
           {% if cart.total_discounts > 0 %}
             {% assign savings = cart.total_discounts | money %}
             <p>
               <span class="cart__subtotal-savings"><em>{{ 'cart.general.savings_html' | t: price: savings }}</em></span>
             </p>
           {% endif %}
+           -->
         </div>
         <div class="cart__checkout">
           <button type="submit" name="update" class="sqs-editable-button button">{{ 'cart.general.update' | t }}</button>
