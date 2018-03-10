@@ -230,7 +230,7 @@
   font-size: 4vw;
 
   input {
-    width: 1em;
+    width: 1.2em;
     font: inherit;
     text-align: center;
     border: none;
@@ -241,7 +241,7 @@
     opacity: 1;
     transition: opacity .5s ease-out;
     border-radius: 0!important;
-    padding: .25em .5em;
+    padding: .25em;
 
     &:focus {
       box-shadow: 0 0 0 1px hsla(0,0%,39%,.4)!important;
@@ -259,7 +259,6 @@
     margin-right: 0;
 
     input {
-      width: 1.2em;
       padding: 5px;
     }
   }
