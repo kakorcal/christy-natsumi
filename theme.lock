@@ -547,7 +547,7 @@ assets/main-home.js:
   development: 2017-11-01T13:34:28-04:00   953b6023bb58c76b5640b85b4d743d24
   production: 2017-10-29T20:10:26-04:00   953b6023bb58c76b5640b85b4d743d24
 assets/main.scss.liquid:
-  development: 2018-03-06T19:38:35-05:00   66d7ebc854b6d11fa460a6251a7ef50f
+  development: 2018-03-09T19:28:05-05:00   1840269378a22415bc2dfb954f8ee75e
   production: 2017-11-01T15:03:41-04:00   df9f0f28bc40bdd9c508ab34e3018025
 assets/marker-bg.gif:
   development: 2017-10-28T19:21:57-04:00   79e69033da8b549ea0e6d5e987fd715a
@@ -574,7 +574,7 @@ assets/respond.min.js:
   development: 2017-08-13T17:52:27-04:00   a2684e9b8fa50d6d11c56a9ada068528
   production: 2017-08-13T17:39:48-04:00   a2684e9b8fa50d6d11c56a9ada068528
 assets/shoppingcart.js:
-  development: 2017-10-29T19:45:59-04:00   c63c217ec1e53ef4174501479055fe2d
+  development: 2018-03-07T10:40:17-05:00   c63c217ec1e53ef4174501479055fe2d
   production: 2017-10-29T20:10:20-04:00   c63c217ec1e53ef4174501479055fe2d
 assets/site-highlightNav.js:
   development: 2017-10-29T19:45:59-04:00   b4da87d489c204afefeb4feeb760a7ba
@@ -674,7 +674,7 @@ snippets/comment.liquid:
   development: 2017-08-13T17:52:28-04:00   c766e42be8a74e05533d0e5a0e3a9ce3
   production: 2017-08-13T17:39:48-04:00   c766e42be8a74e05533d0e5a0e3a9ce3
 snippets/headernotice.liquid:
-  development: 2018-03-05T11:57:21-05:00   162584dc3a634a965ee5e045cf513cb3
+  development: 2018-03-07T05:56:17-05:00   7e238bca8c54b9b15ecc3a454d009575
   production: 2017-11-01T15:03:38-04:00   d49cab2fc80eb5553df5aef3a13b05bf
 snippets/mobilenav.liquid:
   development: 2017-10-31T14:06:45-04:00   c04e98b0924a47d47d3f97b69d29c33c
@@ -725,7 +725,7 @@ templates/blog.liquid:
   development: 2017-08-13T17:52:28-04:00   2d2ff4bd1bf2ef7ce2b889d6a95c6f74
   production: 2017-08-13T17:39:49-04:00   2d2ff4bd1bf2ef7ce2b889d6a95c6f74
 templates/cart.liquid:
-  development: 2018-03-06T19:38:28-05:00   91b14b086f838e6d1dee3a424fcdb8b0
+  development: 2018-03-09T20:07:10-05:00   c8e0c6ff6ceee3bf771d09346df50fa0
   production: 2017-08-13T17:39:49-04:00   49bbbe1b3bda19110f7e72abc158bb91
 templates/collection.liquid:
   development: 2017-11-01T15:00:36-04:00   16d9fd21f8b946683a6bed160267b8e5
